@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Надежда Дормидонтова](https://up.htmlacademy.ru/adaptive/28/user/2280491).
-* Наставник: [Артур Трифонов] (https://htmlacademy.ru/profile/wrgraff).
+* Наставник: [Артур Трифонов](https://htmlacademy.ru/profile/wrgraff).
 
 ---
 
