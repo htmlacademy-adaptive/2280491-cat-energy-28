@@ -6,114 +6,141 @@
   </head>
   <body class="page__body">
 
-    <!-- Вставить header из index.html -->
+    <header class="header">
+      <a class="header__logo-link">
+        <img src="img/logo-mobile.svg" width="33" height="37" alt="Cat energy">
+        <img class="logo-title" src="img/logo-title.svg" width="101" height="18" alt="Cat energy title">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle main-nav__toggle--active" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <main class="main-container">
       <h1 class="main-title">Подбор программы</h1>
-      <p>
+      <p class="call-to-action-phrase">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__personal-data">
           <legend class="visually-hidden">Информация о вашем котике</legend>
-          <div>
-            <label for="name">Имя:*</label>
-            <input type="text" id="name" name="name" placeholder="Барсик" required>
+          <div class="personal-data-item">
+            <label class="personal-data-item__label" for="cat-name">Имя:*</label>
+            <input class="personal-data-item__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
           </div>
 
-          <div>
-            <label for="weight">Вес(кг):*</label>
-            <input type="number" id="weight" name="weight" placeholder="7" required>
+          <div class="personal-data-item">
+            <label class="personal-data-item__label" for="cat-weight">Вес(кг):*</label>
+            <input class="personal-data-item__input" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
           </div>
 
-          <div>
-            <label for="age">Возраст(лет):*</label>
-            <input type="number" id="age" name="age" placeholder="7" required>
+          <div class="personal-data-item">
+            <label class="personal-data-item__label" for="cat-age">Возраст(лет):*</label>
+            <input class="personal-data-item__input" type="number" id="cat-age" name="cat-age" placeholder="7">
           </div>
         </fieldset>
 
         <fieldset class="form__program">
           <legend class="visually-hidden">Выберите программу</legend>
-          <ul class="form__program__list">
-            <li>
-              <label class="form__program__control">
-                <input class="visually-hidden form__program__control__control-input" type="radio"
+          <ul class="program-list">
+            <li class="program-item">
+              <label class="program-item__control">
+                <input class="visually-hidden program-item__control-input" type="radio"
                   name="похудение" value="1" checked>
-                <span class="form__program__control__control-mark"></span>
-                <span class="form__program__control__control-label">Похудение</span>
+                <span class="program-item__control-mark"></span>
+                <span class="program-item__control-label">Похудение</span>
               </label>
             </li>
 
             <li>
-              <label class="form__program__control">
-                <input class="visually-hidden form__program__control__control-input" type="radio"
-                  name="набор массы" value="2" checked>
-                <span class="form__program__control__control-mark"></span>
-                <span class="form__program__control__control-label">Набор массы</span>
+              <label class="program-item__control">
+                <input class="visually-hidden program-item__control-input" type="radio"
+                  name="набор массы" value="2">
+                <span class="program-item__control-mark"></span>
+                <span class="program-item__control-label">Набор массы</span>
               </label>
             </li>
 
             <li>
-              <label class="form__program__control">
-                <input class="visually-hidden form__program__control__control-input" type="radio"
-                  name="не знаю" value="3" checked>
-                <span class="form__program__control__control-mark"></span>
-                <span class="form__program__control__control-label">Не знаю (нужен ваш совет)</span>
+              <label class="program-item__control">
+                <input class="visually-hidden program-item__control-input" type="radio"
+                  name="не знаю" value="3">
+                <span class="program-item__control-mark"></span>
+                <span class="program-item__control-label">Не знаю (нужен ваш совет)</span>
               </label>
             </li>
           </ul>
         </fieldset>
 
         <fieldset class="form__contact-information">
-          <legend>Контактные данные (владельца кота)</legend>
+          <legend class="form__legend">Контактные данные (владельца кота)</legend>
 
-          <div>
-            <label for="e-mail">E-mail:*</label>
-            <input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>>
+          <div class="owner-data-item">
+            <label class="owner-data-item__label" for="email">E-mail:*</label>
+            <input class="owner-data-item__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>>
           </div>
 
           <div>
-            <label for="phone">Телефон:*</label>
-            <input type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>>
+            <label class="owner-data-item__label" for="phone">Телефон:*</label>
+            <input class="owner-data-item__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>>
           </div>
         </fieldset>
 
         <fieldset class="form__comment">
-          <legend>Комментарий</legend>
-          <label class="visually-hidden" for="comment">Ваш комментарий</label>
+          <legend class="form__legend">Комментарий</legend>
+          <label class="visually-hidden " for="comment">Ваш комментарий</label>
           <textarea id="comment" name="comment">Расскажите обо всех повадках кота</textarea>
         </fieldset>
 
         <fieldset class="form__extra">
-          <legend>Дополнительно</legend>
-          <ul>
-            <li>
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="sugar-substitute" checked>
-                <span class="control-mark"></span>
-                <span class="control-label">Сахарозаменитель</span>
+          <legend class="form__legend">Дополнительно</legend>
+          <ul class="extra-product-list">
+            <li class="extra-product-item">
+              <label class="extra-product-item__control">
+                <input class="visually-hidden extra-product-item__control-input"
+                  type="checkbox" name="sugar-substitute" checked>
+                <span class="extra-product-item__control-mark"></span>
+                <span class="extra-product-item__control-label">Сахарозаменитель</span>
               </label>
             </li>
 
-            <li>
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="milk">
-                <span class="control-mark"></span>
-                <span class="control-label">Молоко</span>
+            <li class="extra-product-item">
+              <label class="extra-product-item__control">
+                <input class="visually-hidden extra-product-item__control-input"
+                  type="checkbox" name="milk">
+                <span class="extra-product-item__control-mark"></span>
+                <span class="extra-product-item__control-label">Молоко</span>
               </label>
             </li>
 
-            <li>
+            <li class="extra-product-item">
               <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="vitamins">
-                <span class="control-mark"></span>
-                <span class="control-label">Витамины</span>
+                <input class="visually-hidden control-input"
+                  type="checkbox" name="vitamins">
+                <span class="extra-product-item__control-mark"></span>
+                <span class="extra-product-item__control-label">Витамины</span>
               </label>
             </li>
           </ul>
 
-          <button type="submit">Отправить заявку</button>
+          <button class="primary-button" type="submit">Отправить заявку</button>
         </fieldset>
 
         <p class="form__hint form__hint--position-right">
@@ -122,5 +149,47 @@
       </form>
     </main>
 
-    <!-- Вставить footer из index.html -->
+    <footer class="footer">
+      <div class="address-map">
+        <h2 class="visually-hidden">Наш адрес</h2>
+
+        <div class="address address--size-small">
+          <p class="address__dealers">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="address__location">
+            ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург
+          </address>
+        </div>
+
+        <img class="address-map__map-image" src="img/location.png" width="320" height="362" alt="Наше местоположение">
+      </div>
+
+      <img class="logo-title" src="img/logo-title.svg" width="101" height="18" alt="Cat energy title">
+
+      <div class="footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">vk</span>
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">youtube</span>
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">telegram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__copyright">
+        <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
   </body>
+</html>
