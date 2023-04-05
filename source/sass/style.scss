@@ -1,3 +1,7 @@
+@use "./blocks/page-header.scss";
+
+
+
 @font-face {
   font-family: "Lato";
   font-style: normal;
@@ -32,4 +36,34 @@
   margin: 0;
   padding: 0;
 }
+
+// Color
+$text-color-primary: #000000;
+$text-color-secondary: #ffffff;
+$background-color-primary: #68b738;
+$background-color-secondary: #f2f2f2;
+
+// Font-size
+$font-size-xxl: 60px;
+$font-size-xl: 36px;
+$font-size-l: 30px;
+$font-size-m: 24px;
+$font-size-s: 20px;
+$font-size-xs: 16px;
+$font-size-xxs: 14px;
+
+// Line-height
+$line-height-4xl: 60px;
+$line-height-3xl: 40px;
+$line-height-2xl: 36px;
+$line-height-xl: 30px;
+$line-height-l: 26px;
+$line-height-m: 24px;
+$line-height-s: 20px;
+$line-height-xs: 18px;
+$line-height-2xs: 16px;
+$line-height-3xs: 12px;
+
+
+
 
