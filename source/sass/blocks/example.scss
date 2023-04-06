@@ -1,0 +1,9 @@
+@use 'variables' as v;
+
+.example__wrapper {
+  @include v.block-center;
+}
+
+.example__result-descr {
+  @include v.text-style-small;
+}

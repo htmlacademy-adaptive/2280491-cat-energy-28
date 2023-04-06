@@ -1,0 +1,9 @@
+@use 'variables' as v;
+
+.primary-button {
+  background-color: v.$background-color-primary;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: v.$text-color-secondary;
+  text-decoration: none;
+}

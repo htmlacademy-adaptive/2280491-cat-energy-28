@@ -1,3 +1,37 @@
+@use 'variables' as v;
+
 .page-header {
-  margin: 10px 20px;
+  position: relative;
+
+  &__wrapper {
+    @include v.block-center;
+    margin-top: 10px;
+    margin-bottom: 17px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__toggle {
+    background-image: url(../../img/hamburger-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 24px;
+    height: 18px;
+    border: none;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+  }
+
+  &__main-nav {
+    position: absolute;
+    top: 54px;
+    left: 0;
+  }
 }
+
+

@@ -1,0 +1,69 @@
+@use 'variables' as v;
+
+.hero {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 302px;
+    background-color: v.$background-color-primary;
+    opacity: 85%;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    @include v.block-center;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 320px;
+    height: 302px;
+    background: url(../../img/bg-cat-hero.png);
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+
+  &__title {
+    color: v.$text-color-secondary;
+    margin-top: 27px;
+    text-align: center;
+  }
+
+  &__slogan {
+    font-family: "Oswald", sans-serif;
+    font-size: v.$font-size-xxs;
+    line-height: v.$line-height-3xs;
+    color: v.$text-color-secondary;
+    text-transform: uppercase;
+    margin-top: 25px;
+    display: block;
+    text-align: center;
+  }
+
+  &__image {
+    display: block;
+    margin-top: 29px;
+  }
+
+  &__button {
+    width: 100%;
+    font-size: v.$font-size-xxs;
+    line-height: v.$line-height-xs;
+    padding: 7px 44px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

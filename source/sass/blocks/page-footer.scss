@@ -1,0 +1,7 @@
+@use 'variables' as v;
+
+.page-footer__wrapper {
+  @include v.block-center;
+  background-color: v.$background-color-secondary;
+}
+

@@ -8,16 +8,18 @@
   <body class="page__body">
     <header class="page__header page-header">
       <div class="page-header__wrapper">
+
         <a href="#" class="page-header__logo logo">
           <img class="logo__icon" src="img/logo-mobile.svg" width="33" height="37"
             alt="Cat energy" aria-hidden="true">
           <img class="logo__text" src="img/logo-title.svg" width="101" height="18" alt="Cat energy">
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
 
+        <button class="page-header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+
+        <nav class="page-header__main-nav main-nav visually-hidden">
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--current">
@@ -41,7 +43,7 @@
           <h1 class="hero__title main-title">Функциональное питание для котов</h1>
           <span class="hero__slogan">Занялся собой? Займись котом!</span>
           <img class="hero__image" src="img/can-hero.png" width="280" height="270" alt="Cat Energy PRO 500 г Курица">
-          <a class="primary-button hero__button" href="form.html">Подобрать программу</a>
+          <a class="hero__button primary-button" href="form.html">Подобрать программу</a>
         </div>
       </section>
 

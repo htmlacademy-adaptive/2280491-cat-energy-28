@@ -1,0 +1,42 @@
+@use 'variables' as v;
+
+.about {
+  &__wrapper {
+    @include v.block-center;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    @include v.text-style-small;
+    margin-bottom: 26px;
+    padding-left: 82px;
+    position: relative;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: v.$background-color-primary;
+    top: -3px;
+    left: 0;
+
+  }
+
+
+}

@@ -1,6 +1,18 @@
+@use 'variables' as v;
+
+@use "./blocks/logo.scss";
+@use "./blocks/main-title.scss";
+@use "./blocks/secondary-title.scss";
+@use "./blocks/primary-button.scss";
+@use "./blocks/main-nav.scss";
+
+@use "./blocks/hero.scss";
+@use "./blocks/program.scss";
+@use "./blocks/about.scss";
+@use "./blocks/example.scss";
+
 @use "./blocks/page-header.scss";
-
-
+@use "./blocks/page-footer.scss";
 
 @font-face {
   font-family: "Lato";
@@ -28,42 +40,22 @@
 
 .page__body {
   font-family: "Oswald", sans-serif;
-  font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  background-color: #ffffff;
-  color: #000000;
+  font-size: v.$font-size-s;
+  background-color: v.$text-color-secondary;
+  color: v.$text-color-primary;
   margin: 0;
   padding: 0;
+  min-height: 100%;
 }
 
-// Color
-$text-color-primary: #000000;
-$text-color-secondary: #ffffff;
-$background-color-primary: #68b738;
-$background-color-secondary: #f2f2f2;
-
-// Font-size
-$font-size-xxl: 60px;
-$font-size-xl: 36px;
-$font-size-l: 30px;
-$font-size-m: 24px;
-$font-size-s: 20px;
-$font-size-xs: 16px;
-$font-size-xxs: 14px;
-
-// Line-height
-$line-height-4xl: 60px;
-$line-height-3xl: 40px;
-$line-height-2xl: 36px;
-$line-height-xl: 30px;
-$line-height-l: 26px;
-$line-height-m: 24px;
-$line-height-s: 20px;
-$line-height-xs: 18px;
-$line-height-2xs: 16px;
-$line-height-3xs: 12px;
-
-
-
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
