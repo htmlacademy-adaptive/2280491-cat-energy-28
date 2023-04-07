@@ -1,7 +1,6 @@
 @use "variables" as v;
 
 .page-main {
-
   &__wrapper {
     @include v.block-center;
     border-top: 1px solid #e6e6e6;
