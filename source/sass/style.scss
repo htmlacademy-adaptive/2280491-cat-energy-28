@@ -33,3 +33,10 @@
 @use "./blocks/form-blocks/radio.scss";
 @use "./blocks/form-blocks/checkbox.scss";
 @use "./blocks/form-blocks/form-options.scss";
+
+// Catalog blocks
+@use "./blocks/catalog-blocks/product-catalog.scss";
+@use "./blocks/catalog-blocks/product-card.scss";
+@use "./blocks/catalog-blocks/extra-product-catalog.scss";
+@use "./blocks/catalog-blocks/extra-product-card.scss";
+@use "./blocks/catalog-blocks/present.scss";

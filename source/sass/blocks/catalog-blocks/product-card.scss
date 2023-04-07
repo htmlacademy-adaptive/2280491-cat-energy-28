@@ -1,0 +1,40 @@
+@use "variables" as v;
+
+.product-card {
+  @include v.list-reset;
+}
+
+.product-card__product-link {
+  text-decoration: none;
+}
+
+.product-card__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: v.$font-size-xs;
+  line-height: v.$line-height-s;
+  color: #222222;
+  text-transform: uppercase;
+
+  &--last-card {
+    color: #111111;
+  }
+}
+
+.product-card__table-data {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: v.$font-size-3xs;
+  line-height: v.$line-height-2xs;
+  color: #444444;
+}
+
+.product-card__button {
+  @include v.order-button;
+
+  &--last-card {
+    background-color: #f2f2f2;
+    border: none;
+    color: #444444;
+  }
+}

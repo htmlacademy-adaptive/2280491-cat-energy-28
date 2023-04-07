@@ -1,12 +1,10 @@
 @use "variables" as v;
 
-.form-field {
-  &__label {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: v.$font-size-xs;
-    line-height: v.$line-height-xs;
-    color: #444444;
-    text-transform: uppercase;
-  }
+.form-field__label {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: v.$font-size-xs;
+  line-height: v.$line-height-xs;
+  color: #444444;
+  text-transform: uppercase;
 }

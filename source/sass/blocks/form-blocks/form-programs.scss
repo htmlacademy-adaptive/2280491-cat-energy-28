@@ -1,9 +1,8 @@
 @use "variables" as v;
 
-.form-programs {
-  &__list {
-    @include v.list-reset;
-    padding: 20px 0;
-    border-top: 1px solid #d9d9d9;
-  }
+.form-programs__list {
+  @include v.list-reset;
+  padding: 20px 0;
+  border-top: 1px solid #d9d9d9;
 }
+

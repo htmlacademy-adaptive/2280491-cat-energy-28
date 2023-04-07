@@ -10,30 +10,30 @@
   &:last-child {
     margin-right: 0;
   }
+}
 
-  &__parameter {
-    order: 2;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: v.$font-size-3xs;
-    line-height: v.$line-height-4xs;
-    text-align: center;
-    margin-top: -8px;
-    background-color: #eaeaea;
-    width: 87px;
-  }
+.result-data__parameter {
+  order: 2;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: v.$font-size-3xs;
+  line-height: v.$line-height-4xs;
+  text-align: center;
+  margin-top: -8px;
+  background-color: #eaeaea;
+  width: 87px;
+}
 
-  &__descr {
-    order: 1;
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: v.$font-size-m;
-    line-height: v.$line-height-m;
-    text-align: center;
-    border: 1px solid #cdcdcd;
-    border-radius: 3px;
-    width: 100%;
-    padding: 14px 0 17px;
-    margin: 0;
-  }
+.result-data__descr {
+  order: 1;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: v.$font-size-m;
+  line-height: v.$line-height-m;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  width: 100%;
+  padding: 14px 0 17px;
+  margin: 0;
 }

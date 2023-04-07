@@ -1,23 +1,28 @@
 @use "variables" as v;
 
-.page-main {
-  &__wrapper {
-    @include v.block-center;
-    border-top: 1px solid #e6e6e6;
-  }
+.page-main__wrapper {
+  @include v.block-center;
+  border-top: 1px solid #e6e6e6;
+}
 
-  &__title {
-    margin-top: 27px;
+.page-main__title {
+  margin-top: 27px;
+
+  &--form {
     margin-bottom: 37px;
   }
 
-  &__subheader {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: v.$font-size-2xs;
-    line-height: v.$line-height-xs;
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: 39px;
+  &--catalog {
+    margin-bottom: 41px;
   }
+}
+
+.page-main__subheader {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-xs;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 39px;
 }

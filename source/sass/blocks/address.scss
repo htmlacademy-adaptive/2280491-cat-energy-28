@@ -3,20 +3,20 @@
 .address {
   display: flex;
   padding: 26px 0 26px;
+}
 
-  &__dealers {
-    flex: 1;
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: v.$font-size-xs;
-    line-height: v.$line-height-s;
-    text-transform: uppercase;
-    margin: 0;
-  }
+.address__dealers {
+  flex: 1;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: v.$font-size-xs;
+  line-height: v.$line-height-s;
+  text-transform: uppercase;
+  margin: 0;
+}
 
-  &__location {
-    @include v.text-style-small;
-    flex: 1;
-    font-style: normal;
-  }
+.address__location {
+  @include v.text-style-small;
+  flex: 1;
+  font-style: normal;
 }

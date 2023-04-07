@@ -1,31 +1,29 @@
 @use "variables" as v;
 
-.about {
-  &__wrapper {
-    @include v.block-center;
-    padding-bottom: 49px;
-  }
+.about__wrapper {
+  @include v.block-center;
+  padding-bottom: 49px;
+}
 
-  &__title {
-    margin-bottom: 40px;
-  }
+.about__title {
+  margin-bottom: 40px;
+}
 
-  &__list {
-    @include v.list-reset;
-  }
+.about__list {
+  @include v.list-reset;
+}
 
-  &__item {
-    @include v.text-style-small;
-    margin-bottom: 26px;
-    padding-left: 82px;
-    position: relative;
-  }
+.about__item {
+  @include v.text-style-small;
+  margin-bottom: 26px;
+  padding-left: 82px;
+  position: relative;
 
-  &__item:last-child {
+  &:last-child {
     margin-bottom: 0;
   }
 
-  &__item::before {
+  &::before {
     content: "";
     position: absolute;
     display: block;
@@ -38,19 +36,20 @@
     left: 0;
   }
 
-  &__item--healthy::before {
+  &--healthy::before {
     background-image: url("../../img/about/healthy-about.svg");
   }
 
-  &__item--powder::before {
+  &--powder::before {
     background-image: url("../../img/about/powder-about.svg");
   }
 
-  &__item--food::before {
+  &--food::before {
     background-image: url("../../img/about/food-about.svg");
   }
 
-  &__item--time::before {
+  &--time::before {
     background-image: url("../../img/about/time-about.svg");
   }
 }
+

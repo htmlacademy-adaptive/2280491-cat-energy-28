@@ -2,31 +2,31 @@
 
 .page-footer {
   background-color: v.$background-color-secondary;
+}
 
-  &__wrapper {
-    @include v.block-center;
-    padding: 20px 0;
-  }
+.page-footer__wrapper {
+  @include v.block-center;
+  padding: 20px 0;
+}
 
-  &__logo {
-    text-align: center;
-    display: block;
-    padding: 20px 0;
-    border-bottom: 1px solid #d9d9d9;
-  }
+.page-footer__logo {
+  text-align: center;
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
 
-  &__social-list {
-    border-bottom: 1px solid #d9d9d9;
-  }
+.page-footer__social-list {
+  border-bottom: 1px solid #d9d9d9;
+}
 
-  &__copyright-link {
-    text-decoration: none;
-    color: #444444;
-    background-image: url("../../img/academy-logo.svg");
-    background-repeat: no-repeat;
-    background-position: center right;
-    width: 100%;
-    padding: 20px 0;
-    display: block;
-  }
+.page-footer__copyright-link {
+  text-decoration: none;
+  color: #444444;
+  background-image: url("../../img/academy-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  width: 100%;
+  padding: 20px 0;
+  display: block;
 }

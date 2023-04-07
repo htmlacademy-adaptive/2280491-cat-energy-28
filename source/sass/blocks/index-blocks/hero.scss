@@ -14,17 +14,17 @@
     opacity: 85%;
     z-index: -1;
   }
+}
 
-  &__wrapper {
-    @include v.block-center;
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.hero__wrapper {
+  @include v.block-center;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  &__wrapper::after {
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -33,37 +33,38 @@
     height: 302px;
     background: url("../../img/bg-cat-hero.png");
     background-repeat: no-repeat;
+    background-color: #f2f2f2;
     z-index: -2;
   }
+}
 
-  &__title {
-    color: v.$color-light;
-    margin-top: 27px;
-    text-align: center;
-  }
+.hero__title {
+  color: v.$color-light;
+  margin-top: 27px;
+  text-align: center;
+}
 
-  &__slogan {
-    font-family: "Oswald", sans-serif;
-    font-size: v.$font-size-2xs;
-    line-height: v.$line-height-3xs;
-    color: v.$color-light;
-    text-transform: uppercase;
-    margin-top: 25px;
-    display: block;
-    text-align: center;
-  }
+.hero__slogan {
+  font-family: "Oswald", sans-serif;
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-3xs;
+  color: v.$color-light;
+  text-transform: uppercase;
+  margin-top: 25px;
+  display: block;
+  text-align: center;
+}
 
-  &__image {
-    display: block;
-    margin-top: 29px;
-  }
+.hero__image {
+  display: block;
+  margin-top: 29px;
+}
 
-  &__button {
-    width: 100%;
-    font-size: v.$font-size-2xs;
-    line-height: v.$line-height-xs;
-    padding: 7px 44px;
-    box-sizing: border-box;
-    text-align: center;
-  }
+.hero__button {
+  width: 100%;
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-xs;
+  padding: 7px 44px;
+  box-sizing: border-box;
+  text-align: center;
 }

@@ -1,31 +1,30 @@
 @use "variables" as v;
 
-.program {
-  &__wrapper {
-    @include v.block-center;
-    margin-top: 20px;
-  }
 
-  &__item {
-    background-color: v.$background-color-secondary;
-    padding: 30px 20px 18px 20px;
-    margin-bottom: 20px;
-    position: relative;
-    box-sizing: border-box;
-  }
+.program__wrapper {
+  @include v.block-center;
+  margin-top: 20px;
+}
 
-  &__title {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: v.$font-size-m;
-    line-height: v.$line-height-2xl;
-    text-transform: uppercase;
-    display: block;
-    margin: 0;
-    margin-left: 69px;
-  }
+.program__item {
+  background-color: v.$background-color-secondary;
+  padding: 30px 20px 18px 20px;
+  margin-bottom: 20px;
+  position: relative;
+  box-sizing: border-box;
+}
 
-  &__title::before {
+.program__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: v.$font-size-m;
+  line-height: v.$line-height-2xl;
+  text-transform: uppercase;
+  display: block;
+  margin: 0;
+  margin-left: 69px;
+
+  &::before {
     content: "";
     position: absolute;
     display: block;
@@ -37,7 +36,7 @@
     left: 22px;
   }
 
-  &__title--slim::after {
+  &--slim::after {
     content: "";
     position: absolute;
     width: 36px;
@@ -49,7 +48,7 @@
     left: 29px;
   }
 
-  &__title--pro::after {
+  &--pro::after {
     content: "";
     position: absolute;
     width: 67px;
@@ -60,26 +59,26 @@
     top: 35px;
     left: 13px;
   }
+}
 
-  &__descr {
-    @include v.text-style-small;
-    color: #444444;
-    margin-top: 29px;
-    padding-bottom: 23px;
-    border-bottom: 1px solid #d9d9d9;
-  }
+.program__descr {
+  @include v.text-style-small;
+  color: #444444;
+  margin-top: 29px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+}
 
-  &__link {
-    font-family: "Oswald", sans-serif;
-    font-size: v.$font-size-xs;
-    line-height: v.$line-height-2xs;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: v.$text-color-primary;
-    position: relative;
-    background-image: url("../../img/arrow-program.svg");
-    background-repeat: no-repeat;
-    background-position: center right;
-    padding: 4px 39px 4px 0;
-  }
+.program__link {
+  font-family: "Oswald", sans-serif;
+  font-size: v.$font-size-xs;
+  line-height: v.$line-height-2xs;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: v.$text-color-primary;
+  position: relative;
+  background-image: url("../../img/arrow-program.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding: 4px 39px 4px 0;
 }
