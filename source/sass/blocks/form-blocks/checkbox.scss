@@ -1,0 +1,11 @@
+@use "variables" as v;
+
+.checkbox {
+  &__text {
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: v.$font-size-xs;
+    line-height: v.$line-height-xs;
+    text-transform: uppercase;
+  }
+}

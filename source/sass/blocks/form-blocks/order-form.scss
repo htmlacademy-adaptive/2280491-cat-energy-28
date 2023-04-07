@@ -1,0 +1,29 @@
+@use "variables" as v;
+
+.order-form {
+  &__group {
+    @include v.form-reset;
+  }
+
+  &__legend {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: v.$font-size-m;
+    line-height: v.$line-height-l;
+  }
+
+  &__button {
+    width: 100%;
+    border: none;
+    padding: 7px 0;
+  }
+
+  &__hint {
+    margin: 21px 0 32px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: v.$font-size-2xs;
+    line-height: v.$line-height-2xs;
+    text-align: center;
+  }
+}

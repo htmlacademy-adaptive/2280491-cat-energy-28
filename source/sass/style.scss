@@ -1,41 +1,35 @@
 // Basic styles
 @use "variables" as v;
 @use "./fonts.scss";
-// Blocks
-@use "./blocks/logo.scss";
-@use "./blocks/main-title.scss";
-@use "./blocks/secondary-title.scss";
-@use "./blocks/primary-button.scss";
+@use "./blocks/base.scss";
+
+// Common little blocks
+@use "./blocks/little-blocks/logo.scss";
+@use "./blocks/little-blocks/main-title.scss";
+@use "./blocks/little-blocks/secondary-title.scss";
+@use "./blocks/little-blocks/primary-button.scss";
+
+// Common blocks
+@use "./blocks/page-header.scss";
 @use "./blocks/main-nav.scss";
-@use "./blocks/result-data.scss";
+@use "./blocks/page-footer.scss";
 @use "./blocks/address.scss";
 @use "./blocks/social-list.scss";
-@use "./blocks/hero.scss";
-@use "./blocks/program.scss";
-@use "./blocks/about.scss";
-@use "./blocks/example.scss";
 @use "./blocks/address-map.scss";
-@use "./blocks/page-header.scss";
-@use "./blocks/page-footer.scss";
+@use "./blocks/page-main.scss";
 
-.page__body {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: v.$font-size-s;
-  background-color: v.$color-light;
-  color: v.$text-color-primary;
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
+// Index blocks
+@use "./blocks/index-blocks/about.scss";
+@use "./blocks/index-blocks/example.scss";
+@use "./blocks/index-blocks/hero.scss";
+@use "./blocks/index-blocks/program.scss";
+@use "./blocks/index-blocks/result-data.scss";
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+// Form blocks
+@use "./blocks/form-blocks/order-form.scss";
+@use "./blocks/form-blocks/form-group.scss";
+@use "./blocks/form-blocks/form-field.scss";
+@use "./blocks/form-blocks/form-programs.scss";
+@use "./blocks/form-blocks/radio.scss";
+@use "./blocks/form-blocks/checkbox.scss";
+@use "./blocks/form-blocks/form-options.scss";

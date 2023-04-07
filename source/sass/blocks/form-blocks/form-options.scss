@@ -1,0 +1,12 @@
+@use "variables" as v;
+
+.form-options {
+  &__list {
+    @include v.list-reset;
+    margin-bottom: 34px;
+  }
+
+  &__legend {
+    margin-bottom: 34px;
+  }
+}
