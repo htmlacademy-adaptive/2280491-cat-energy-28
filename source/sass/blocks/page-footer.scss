@@ -1,7 +1,33 @@
 @use 'variables' as v;
 
-.page-footer__wrapper {
-  @include v.block-center;
+.page-footer {
   background-color: v.$background-color-secondary;
-}
 
+  &__wrapper {
+    @include v.block-center;
+    padding: 20px 0;
+  }
+
+  &__logo {
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid #D9D9D9;
+  }
+
+  &__social-list {
+    border-bottom: 1px solid #D9D9D9;
+  }
+
+  &__copyright-link {
+    text-decoration: none;
+    color: #444444;
+    background-image: url(../../img/academy-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    width: 100%;
+    padding: 20px 0;
+    display: block;
+  }
+
+}

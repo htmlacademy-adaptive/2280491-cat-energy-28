@@ -3,6 +3,7 @@
 .about {
   &__wrapper {
     @include v.block-center;
+    padding-bottom: 49px;
   }
 
   &__title {
@@ -10,9 +11,7 @@
   }
 
   &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    @include v.list-reset;
   }
 
   &__item {
@@ -33,10 +32,25 @@
     width: 60px;
     height: 60px;
     background-color: v.$background-color-primary;
+    background-repeat: no-repeat;
+    background-position: center;
     top: -3px;
     left: 0;
-
   }
 
+  &__item--healthy::before {
+    background-image: url(../../img/about/healthy-about.svg);
+  }
 
+  &__item--powder::before {
+    background-image: url(../../img/about/powder-about.svg);
+  }
+
+  &__item--food::before {
+    background-image: url(../../img/about/food-about.svg);
+  }
+
+  &__item--time::before {
+    background-image: url(../../img/about/time-about.svg);
+  }
 }

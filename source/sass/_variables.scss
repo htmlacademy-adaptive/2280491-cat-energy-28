@@ -7,13 +7,14 @@ $background-color-light: #FFFFFF;
 
 
 // Font-size
-$font-size-xxl: 60px;
+$font-size-2xl: 60px;
 $font-size-xl: 36px;
 $font-size-l: 30px;
 $font-size-m: 24px;
 $font-size-s: 20px;
 $font-size-xs: 16px;
-$font-size-xxs: 14px;
+$font-size-2xs: 14px;
+$font-size-3xs: 12px;
 
 // Line-height
 $line-height-4xl: 60px;
@@ -36,7 +37,14 @@ $line-height-4xs: 12px;
 @mixin text-style-small {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: $font-size-xxs;
+  font-size: $font-size-2xs;
   line-height: $line-height-xs;
   color: $text-color-primary;
+  color: #444444;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

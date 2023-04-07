@@ -1,0 +1,22 @@
+@use 'variables' as v;
+
+.address {
+  display: flex;
+  padding: 26px 0 26px;
+
+  &__dealers {
+    flex: 1;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: v.$font-size-xs;
+    line-height: v.$line-height-s;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__location {
+    flex: 1;
+    @include v.text-style-small;
+    font-style: normal;
+  }
+}

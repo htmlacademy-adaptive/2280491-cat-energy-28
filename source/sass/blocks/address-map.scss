@@ -1,0 +1,11 @@
+@use 'variables' as v;
+
+.address-map {
+  &__wrapper {
+    @include v.block-center;
+  }
+
+  &__image {
+    margin-left: -20px;
+  }
+}

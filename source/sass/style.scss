@@ -1,42 +1,24 @@
 @use 'variables' as v;
+@use "./fonts.scss";
 
 @use "./blocks/logo.scss";
 @use "./blocks/main-title.scss";
 @use "./blocks/secondary-title.scss";
 @use "./blocks/primary-button.scss";
 @use "./blocks/main-nav.scss";
+@use "./blocks/result-data.scss";
+@use "./blocks/address.scss";
+@use "./blocks/social-list.scss";
 
 @use "./blocks/hero.scss";
 @use "./blocks/program.scss";
 @use "./blocks/about.scss";
 @use "./blocks/example.scss";
+@use "./blocks/address-map.scss";
 
 @use "./blocks/page-header.scss";
 @use "./blocks/page-footer.scss";
 
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
-  font-display: swap;
-}
 
 .page__body {
   font-family: "Oswald", sans-serif;
