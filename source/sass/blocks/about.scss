@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use "variables" as v;
 
 .about {
   &__wrapper {
@@ -39,18 +39,18 @@
   }
 
   &__item--healthy::before {
-    background-image: url(../../img/about/healthy-about.svg);
+    background-image: url("../../img/about/healthy-about.svg");
   }
 
   &__item--powder::before {
-    background-image: url(../../img/about/powder-about.svg);
+    background-image: url("../../img/about/powder-about.svg");
   }
 
   &__item--food::before {
-    background-image: url(../../img/about/food-about.svg);
+    background-image: url("../../img/about/food-about.svg");
   }
 
   &__item--time::before {
-    background-image: url(../../img/about/time-about.svg);
+    background-image: url("../../img/about/time-about.svg");
   }
 }

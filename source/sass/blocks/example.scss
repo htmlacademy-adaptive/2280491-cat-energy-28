@@ -1,7 +1,7 @@
-@use 'variables' as v;
+@use "variables" as v;
 
 .example {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 
   &__wrapper {
     @include v.block-center;
@@ -31,4 +31,3 @@
     margin-top: 20px;
   }
 }
-

@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use "variables" as v;
 
 .result-data {
   display: flex;
@@ -19,7 +19,7 @@
     line-height: v.$line-height-4xs;
     text-align: center;
     margin-top: -8px;
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
     width: 87px;
   }
 
@@ -30,7 +30,7 @@
     font-size: v.$font-size-m;
     line-height: v.$line-height-m;
     text-align: center;
-    border: 1px solid #CDCDCD;
+    border: 1px solid #cdcdcd;
     border-radius: 3px;
     width: 100%;
     padding: 14px 0 17px;

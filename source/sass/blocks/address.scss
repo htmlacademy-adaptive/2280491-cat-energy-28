@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use "variables" as v;
 
 .address {
   display: flex;
@@ -15,8 +15,8 @@
   }
 
   &__location {
-    flex: 1;
     @include v.text-style-small;
+    flex: 1;
     font-style: normal;
   }
 }

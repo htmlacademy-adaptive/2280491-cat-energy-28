@@ -1,10 +1,8 @@
 // Color
 $text-color-primary: #000000;
-$text-color-secondary: #FFFFFF;
-$background-color-primary: #68B738;
-$background-color-secondary: #F2F2F2;
-$background-color-light: #FFFFFF;
-
+$background-color-primary: #68b738;
+$background-color-secondary: #f2f2f2;
+$color-light: #ffffff;
 
 // Font-size
 $font-size-2xl: 60px;
@@ -39,7 +37,6 @@ $line-height-4xs: 12px;
   font-weight: 400;
   font-size: $font-size-2xs;
   line-height: $line-height-xs;
-  color: $text-color-primary;
   color: #444444;
 }
 

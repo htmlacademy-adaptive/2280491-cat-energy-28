@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use "variables" as v;
 
 .hero {
   position: relative;
@@ -31,13 +31,13 @@
     left: -20px;
     width: 320px;
     height: 302px;
-    background: url(../../img/bg-cat-hero.png);
+    background: url("../../img/bg-cat-hero.png");
     background-repeat: no-repeat;
     z-index: -2;
   }
 
   &__title {
-    color: v.$text-color-secondary;
+    color: v.$color-light;
     margin-top: 27px;
     text-align: center;
   }
@@ -46,7 +46,7 @@
     font-family: "Oswald", sans-serif;
     font-size: v.$font-size-2xs;
     line-height: v.$line-height-3xs;
-    color: v.$text-color-secondary;
+    color: v.$color-light;
     text-transform: uppercase;
     margin-top: 25px;
     display: block;

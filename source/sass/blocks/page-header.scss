@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use "variables" as v;
 
 .page-header {
   position: relative;
@@ -15,7 +15,7 @@
   }
 
   &__toggle {
-    background-image: url(../../img/hamburger-menu.svg);
+    background-image: url("../../img/hamburger-menu.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
@@ -23,7 +23,6 @@
     height: 18px;
     border: none;
     padding: 0;
-    border: 0;
     cursor: pointer;
   }
 
@@ -33,5 +32,3 @@
     left: 0;
   }
 }
-
-

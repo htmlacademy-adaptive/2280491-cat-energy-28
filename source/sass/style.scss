@@ -1,6 +1,7 @@
-@use 'variables' as v;
+// Basic styles
+@use "variables" as v;
 @use "./fonts.scss";
-
+// Blocks
 @use "./blocks/logo.scss";
 @use "./blocks/main-title.scss";
 @use "./blocks/secondary-title.scss";
@@ -9,22 +10,19 @@
 @use "./blocks/result-data.scss";
 @use "./blocks/address.scss";
 @use "./blocks/social-list.scss";
-
 @use "./blocks/hero.scss";
 @use "./blocks/program.scss";
 @use "./blocks/about.scss";
 @use "./blocks/example.scss";
 @use "./blocks/address-map.scss";
-
 @use "./blocks/page-header.scss";
 @use "./blocks/page-footer.scss";
-
 
 .page__body {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: v.$font-size-s;
-  background-color: v.$text-color-secondary;
+  background-color: v.$color-light;
   color: v.$text-color-primary;
   margin: 0;
   padding: 0;
