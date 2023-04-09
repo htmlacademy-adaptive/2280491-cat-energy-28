@@ -1,9 +1,10 @@
 @use "variables" as v;
 
-.checkbox__text {
-  font-family: "Oswald", sans-serif;
+.radio__text {
+  font-family: v.$primary-font;
   font-weight: 400;
   font-size: v.$font-size-xs;
   line-height: v.$line-height-xs;
   text-transform: uppercase;
+  color: v.$color-gray-500;
 }

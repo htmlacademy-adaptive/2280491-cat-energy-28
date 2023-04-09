@@ -1,13 +1,12 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .address {
-  display: flex;
   padding: 26px 0 26px;
 }
 
 .address__dealers {
-  flex: 1;
-  font-family: "Oswald", sans-serif;
+  font-family: v.$primary-font;
   font-weight: 400;
   font-size: v.$font-size-xs;
   line-height: v.$line-height-s;
@@ -16,7 +15,6 @@
 }
 
 .address__location {
-  @include v.text-style-small;
-  flex: 1;
+  @include m.text-style-small;
   font-style: normal;
 }

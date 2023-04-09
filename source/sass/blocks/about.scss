@@ -1,7 +1,7 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .about__wrapper {
-  @include v.block-center;
   padding-bottom: 49px;
 }
 
@@ -10,11 +10,11 @@
 }
 
 .about__list {
-  @include v.list-reset;
+  @include m.list-reset;
 }
 
 .about__item {
-  @include v.text-style-small;
+  @include m.text-style-small;
   margin-bottom: 26px;
   padding-left: 82px;
   position: relative;
@@ -29,7 +29,7 @@
     display: block;
     width: 60px;
     height: 60px;
-    background-color: v.$background-color-primary;
+    background-color: v.$brand-color-500;
     background-repeat: no-repeat;
     background-position: center;
     top: -3px;

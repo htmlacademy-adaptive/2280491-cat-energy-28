@@ -1,7 +1,7 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .page-main__wrapper {
-  @include v.block-center;
   border-top: 1px solid #e6e6e6;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .page-main__subheader {
-  font-family: "Oswald", sans-serif;
+  font-family: v.$primary-font;
   font-weight: 400;
   font-size: v.$font-size-2xs;
   line-height: v.$line-height-xs;

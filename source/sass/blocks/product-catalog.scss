@@ -1,5 +1,6 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .product-catalog {
-  @include v.list-reset;
+  @include m.list-reset;
 }

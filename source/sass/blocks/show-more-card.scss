@@ -1,0 +1,26 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.show-more-card__title {
+  font-family: v.$primary-font;
+  font-weight: 400;
+  font-size: v.$font-size-xs;
+  line-height: v.$line-height-s;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.show-more-card__text {
+  font-family: v.$secondary-font;
+  font-weight: 400;
+  font-size: v.$font-size-3xs;
+  line-height: v.$line-height-2xs;
+  color: v.$color-gray-400;
+}
+
+.show-more-card__button {
+  background-color: #f2f2f2;
+  border: none;
+  color: v.$color-gray-400;
+  width: 100%;
+}

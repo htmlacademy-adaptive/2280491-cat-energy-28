@@ -1,15 +1,12 @@
 // Basic styles
-@use "variables" as v;
 @use "./fonts.scss";
-@use "./blocks/base.scss";
+@use "./base.scss";
 
-// Common little blocks
-@use "./blocks/little-blocks/logo.scss";
-@use "./blocks/little-blocks/main-title.scss";
-@use "./blocks/little-blocks/secondary-title.scss";
-@use "./blocks/little-blocks/primary-button.scss";
-
-// Common blocks
+// Blocks
+@use "./blocks/logo.scss";
+@use "./blocks/main-title.scss";
+@use "./blocks/secondary-title.scss";
+@use "./blocks/button.scss";
 @use "./blocks/page-header.scss";
 @use "./blocks/main-nav.scss";
 @use "./blocks/page-footer.scss";
@@ -17,26 +14,23 @@
 @use "./blocks/social-list.scss";
 @use "./blocks/address-map.scss";
 @use "./blocks/page-main.scss";
-
-// Index blocks
-@use "./blocks/index-blocks/about.scss";
-@use "./blocks/index-blocks/example.scss";
-@use "./blocks/index-blocks/hero.scss";
-@use "./blocks/index-blocks/program.scss";
-@use "./blocks/index-blocks/result-data.scss";
-
-// Form blocks
-@use "./blocks/form-blocks/order-form.scss";
-@use "./blocks/form-blocks/form-group.scss";
-@use "./blocks/form-blocks/form-field.scss";
-@use "./blocks/form-blocks/form-programs.scss";
-@use "./blocks/form-blocks/radio.scss";
-@use "./blocks/form-blocks/checkbox.scss";
-@use "./blocks/form-blocks/form-options.scss";
-
-// Catalog blocks
-@use "./blocks/catalog-blocks/product-catalog.scss";
-@use "./blocks/catalog-blocks/product-card.scss";
-@use "./blocks/catalog-blocks/extra-product-catalog.scss";
-@use "./blocks/catalog-blocks/extra-product-card.scss";
-@use "./blocks/catalog-blocks/present.scss";
+@use "./blocks/about.scss";
+@use "./blocks/example.scss";
+@use "./blocks/hero.scss";
+@use "./blocks/program.scss";
+@use "./blocks/result-data.scss";
+@use "./blocks/order-form.scss";
+@use "./blocks/form-group.scss";
+@use "./blocks/form-field.scss";
+@use "./blocks/form-programs.scss";
+@use "./blocks/radio.scss";
+@use "./blocks/checkbox.scss";
+@use "./blocks/form-options.scss";
+@use "./blocks/product-catalog.scss";
+@use "./blocks/product-card.scss";
+@use "./blocks/show-more-card.scss";
+@use "./blocks/extra-product-catalog.scss";
+@use "./blocks/extra-product-card.scss";
+@use "./blocks/present.scss";
+@use "./blocks/page.scss";
+@use "./blocks/wrapper.scss";

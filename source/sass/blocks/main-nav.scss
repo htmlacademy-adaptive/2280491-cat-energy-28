@@ -1,8 +1,7 @@
 @use "variables" as v;
 
 .main-nav {
-  width: 100%;
-  background-color: v.$color-light;
+  background-color: v.$base-color;
 }
 
 .main-nav__list {
@@ -12,7 +11,7 @@
 }
 
 .main-nav__link {
-  font-family: "Oswald", sans-serif;
+  font-family: v.$primary-font;
   font-weight: 500;
   font-size: v.$font-size-s;
   line-height: v.$line-height-s;
@@ -24,4 +23,5 @@
   padding-bottom: 24px;
   border-top: 1px solid #e6e6e6;
   text-align: center;
+  width: 100%;
 }

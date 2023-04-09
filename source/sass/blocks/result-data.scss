@@ -14,7 +14,7 @@
 
 .result-data__parameter {
   order: 2;
-  font-family: "Lato", sans-serif;
+  font-family: v.$secondary-font;
   font-weight: 400;
   font-size: v.$font-size-3xs;
   line-height: v.$line-height-4xs;
@@ -26,7 +26,7 @@
 
 .result-data__descr {
   order: 1;
-  font-family: "Oswald", sans-serif;
+  font-family: v.$primary-font;
   font-weight: 400;
   font-size: v.$font-size-m;
   line-height: v.$line-height-m;

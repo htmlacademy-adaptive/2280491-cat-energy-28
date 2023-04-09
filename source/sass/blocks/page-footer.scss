@@ -1,11 +1,11 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .page-footer {
-  background-color: v.$background-color-secondary;
+  background-color: v.$color-gray-50;
 }
 
 .page-footer__wrapper {
-  @include v.block-center;
   padding: 20px 0;
 }
 
@@ -22,7 +22,7 @@
 
 .page-footer__copyright-link {
   text-decoration: none;
-  color: #444444;
+  color: v.$color-gray-400;
   background-image: url("../../img/academy-logo.svg");
   background-repeat: no-repeat;
   background-position: center right;

@@ -1,11 +1,11 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .page-header {
   position: relative;
 }
 
 .page-header__wrapper {
-  @include v.block-center;
   margin-top: 10px;
   margin-bottom: 17px;
   box-sizing: border-box;
@@ -28,7 +28,7 @@
 }
 
 .page-header__main-nav {
-  position: absolute;
+  width: 100%;
   top: 54px;
   left: 0;
 }

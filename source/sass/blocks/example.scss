@@ -1,28 +1,28 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .example {
   background-color: #eaeaea;
 }
 
 .example__wrapper {
-  @include v.block-center;
   padding-top: 35px;
   padding-bottom: 40px;
 }
 
 .example__result-descr {
-  @include v.text-style-small;
+  @include m.text-style-small;
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
 .example__result-data-wrapper {
-  @include v.list-reset;
+  @include m.list-reset;
   display: flex;
 }
 
 .example__costs {
-  font-family: "Oswald", sans-serif;
+  font-family: v.$primary-font;
   font-weight: 400;
   font-size: v.$font-size-2xs;
   line-height: v.$line-height-s;

@@ -1,12 +1,13 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .extra-product-card__title {
-  font-family: "Oswald", sans-serif;
+  font-family: v.$primary-font;
   font-weight: 400;
   font-size: v.$font-size-xs;
   line-height: v.$line-height-2xs;
   text-transform: uppercase;
-  color: #222222;
+  color: v.$color-gray-500;
   margin: 0;
   margin-bottom: 13px;
 }
@@ -19,14 +20,14 @@
 }
 
 .extra-product-card__data {
-  font-family: "Lato", sans-serif;
+  font-family: v.$secondary-font;
   font-weight: 400;
   font-size: v.$font-size-xs;
   line-height: v.$line-height-3xs;
-  color: #444444;
+  color: v.$color-gray-400;
   margin: 0;
 }
 
 .extra-product-card__button {
-  @include v.order-button;
+  width: 100%;
 }

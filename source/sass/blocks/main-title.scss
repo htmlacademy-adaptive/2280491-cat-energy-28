@@ -1,7 +1,7 @@
 @use "variables" as v;
 
 .main-title {
-  font-family: "Oswald", sans-serif;
+  font-family: v.$primary-font;
   font-weight: 400;
   font-size: v.$font-size-xl;
   line-height: v.$line-height-2xl;

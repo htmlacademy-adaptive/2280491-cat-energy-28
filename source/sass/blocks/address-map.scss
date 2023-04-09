@@ -1,8 +1,4 @@
-@use "variables" as v;
-
-.address-map__wrapper {
-  @include v.block-center;
-}
+@use "mixins" as m;
 
 .address-map__image {
   margin-left: -20px;
