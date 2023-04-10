@@ -1,0 +1,28 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.order-form__group {
+  @include m.form-reset;
+}
+
+.order-form__legend {
+  font-family: v.$primary-font;
+  font-weight: 400;
+  font-size: v.$font-size-m;
+  line-height: v.$line-height-l;
+}
+
+.order-form__button {
+  width: 100%;
+  border: none;
+  padding: 7px 0;
+}
+
+.order-form__hint {
+  margin: 21px 0 32px;
+  font-family: v.$secondary-font;
+  font-weight: 400;
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-2xs;
+  text-align: center;
+}

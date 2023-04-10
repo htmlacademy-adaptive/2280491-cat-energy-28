@@ -1,0 +1,11 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.form-options__list {
+  @include m.list-reset;
+  margin-bottom: 34px;
+}
+
+.form-options__legend {
+  margin-bottom: 34px;
+}

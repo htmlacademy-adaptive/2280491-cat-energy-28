@@ -1,1 +1,36 @@
-// Начните писать стили здесь
+// Basic styles
+@use "./fonts.scss";
+@use "./base.scss";
+
+// Blocks
+@use "./blocks/logo.scss";
+@use "./blocks/main-title.scss";
+@use "./blocks/secondary-title.scss";
+@use "./blocks/button.scss";
+@use "./blocks/page-header.scss";
+@use "./blocks/main-nav.scss";
+@use "./blocks/page-footer.scss";
+@use "./blocks/address.scss";
+@use "./blocks/social-list.scss";
+@use "./blocks/address-map.scss";
+@use "./blocks/page-main.scss";
+@use "./blocks/about.scss";
+@use "./blocks/example.scss";
+@use "./blocks/hero.scss";
+@use "./blocks/program.scss";
+@use "./blocks/result-data.scss";
+@use "./blocks/order-form.scss";
+@use "./blocks/form-group.scss";
+@use "./blocks/form-field.scss";
+@use "./blocks/form-programs.scss";
+@use "./blocks/radio.scss";
+@use "./blocks/checkbox.scss";
+@use "./blocks/form-options.scss";
+@use "./blocks/product-catalog.scss";
+@use "./blocks/product-card.scss";
+@use "./blocks/show-more-card.scss";
+@use "./blocks/extra-product-catalog.scss";
+@use "./blocks/extra-product-card.scss";
+@use "./blocks/present.scss";
+@use "./blocks/page.scss";
+@use "./blocks/wrapper.scss";

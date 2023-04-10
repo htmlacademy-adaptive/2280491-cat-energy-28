@@ -1,0 +1,10 @@
+@use "variables" as v;
+
+.secondary-title {
+  font-family: v.$primary-font;
+  font-weight: 400;
+  font-size: v.$font-size-xl;
+  line-height: v.$line-height-3xl;
+  color: v.$black-color;
+  margin: 0;
+}

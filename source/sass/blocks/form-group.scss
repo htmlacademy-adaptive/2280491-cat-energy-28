@@ -1,0 +1,13 @@
+@use "variables" as v;
+
+.form-group {
+  padding-bottom: 24px;
+}
+
+.form-group__legend {
+  font-family: v.$primary-font;
+  font-weight: 400;
+  font-size: v.$font-size-m;
+  line-height: v.$line-height-l;
+  margin-bottom: 35px;
+}

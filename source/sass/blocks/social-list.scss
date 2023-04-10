@@ -1,0 +1,37 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.social-list {
+  @include m.list-reset;
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.social-list__item {
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-list__link {
+  width: 28px;
+  height: 22px;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--vkontakte {
+    background-image: url("../img/socials/vkontakte.svg");
+  }
+
+  &--youtube {
+    background-image: url("../img/socials/youtube.svg");
+  }
+
+  &--telegram {
+    background-image: url("../img/socials/telegram.svg");
+  }
+}

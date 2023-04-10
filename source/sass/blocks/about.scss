@@ -1,0 +1,54 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.about__wrapper {
+  padding-bottom: 49px;
+}
+
+.about__title {
+  margin-bottom: 40px;
+}
+
+.about__list {
+  @include m.list-reset;
+}
+
+.about__item {
+  @include m.text-style-small;
+  margin-bottom: 26px;
+  padding-left: 82px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: v.$brand-color-500;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -3px;
+    left: 0;
+  }
+
+  &--healthy::before {
+    background-image: url("../img/about/healthy-about.svg");
+  }
+
+  &--powder::before {
+    background-image: url("../img/about/powder-about.svg");
+  }
+
+  &--food::before {
+    background-image: url("../img/about/food-about.svg");
+  }
+
+  &--time::before {
+    background-image: url("../img/about/time-about.svg");
+  }
+}

@@ -1,0 +1,11 @@
+@use "variables" as v;
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo__icon {
+  margin-right: 56px;
+}

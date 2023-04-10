@@ -1,0 +1,20 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.address {
+  padding: 26px 0 26px;
+}
+
+.address__dealers {
+  font-family: v.$primary-font;
+  font-weight: 400;
+  font-size: v.$font-size-xs;
+  line-height: v.$line-height-s;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.address__location {
+  @include m.text-style-small;
+  font-style: normal;
+}

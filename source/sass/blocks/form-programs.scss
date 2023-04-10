@@ -1,0 +1,8 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.form-programs__list {
+  @include m.list-reset;
+  padding: 20px 0;
+  border-top: 1px solid #d9d9d9;
+}

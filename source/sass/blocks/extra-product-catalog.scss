@@ -1,0 +1,24 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.extra-product-catalog {
+  padding: 25px 0 19px;
+}
+
+.extra-product-catalog__title {
+  font-family: v.$primary-font;
+  font-weight: 400;
+  font-size: v.$font-size-m;
+  line-height: v.$line-height-2xl;
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.extra-product-catalog__list {
+  @include m.list-reset;
+}
+
+.extra-product-catalog__item {
+  border-top: 1px solid v.$color-gray-200;
+  padding: 13px 0 19px;
+}
