@@ -37,18 +37,18 @@
   }
 
   &--healthy::before {
-    background-image: url("../../img/about/healthy-about.svg");
+    background-image: url("../img/about/healthy-about.svg");
   }
 
   &--powder::before {
-    background-image: url("../../img/about/powder-about.svg");
+    background-image: url("../img/about/powder-about.svg");
   }
 
   &--food::before {
-    background-image: url("../../img/about/food-about.svg");
+    background-image: url("../img/about/food-about.svg");
   }
 
   &--time::before {
-    background-image: url("../../img/about/time-about.svg");
+    background-image: url("../img/about/time-about.svg");
   }
 }

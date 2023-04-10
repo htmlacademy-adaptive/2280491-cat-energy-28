@@ -1,7 +1,7 @@
 @use "variables" as v;
 
 .main-nav {
-  background-color: v.$base-color;
+  background-color: v.$white-color;
 }
 
 .main-nav__list {
@@ -16,7 +16,7 @@
   font-size: v.$font-size-s;
   line-height: v.$line-height-s;
   text-transform: uppercase;
-  color: v.$text-color-primary;
+  color: v.$black-color;
   text-decoration: none;
   display: block;
   padding-top: 22px;
