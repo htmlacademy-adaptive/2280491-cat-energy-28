@@ -5,6 +5,12 @@
   font-weight: 400;
   font-size: v.$font-size-xl;
   line-height: v.$line-height-2xl;
-  color: v.$black-color;
   margin: 0;
+}
+
+@media (min-width: v.$tablet-width) {
+  .main-title {
+    font-size: v.$font-size-2xl;
+    line-height: v.$line-height-4xl;
+  }
 }

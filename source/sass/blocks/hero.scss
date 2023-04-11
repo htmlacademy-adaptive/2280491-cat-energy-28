@@ -46,7 +46,7 @@
 
 .hero__slogan {
   font-family: v.$primary-font;
-  font-size: v.$font-size-2xs;
+  font-size: v.$font-size-3xs;
   line-height: v.$line-height-3xs;
   color: v.$white-color;
   text-transform: uppercase;
@@ -62,9 +62,56 @@
 
 .hero__button {
   width: 100%;
-  font-size: v.$font-size-2xs;
+  font-size: v.$font-size-3xs;
   line-height: v.$line-height-xs;
-  padding: 7px 44px;
+  padding: 7px 0;
   box-sizing: border-box;
   text-align: center;
+}
+
+@media (min-width: v.$tablet-width) {
+
+  .hero {
+    &::before {
+      display: none;
+    }
+  }
+
+  .hero__wrapper {
+    align-items: start;
+    padding-left: 86px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .hero__title {
+    color: v.$black-color;
+    margin-top: 62px;
+    text-align: start;
+  }
+
+  .hero__slogan {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-s;
+    color: v.$black-color;
+    margin-top: 41px;
+    margin-bottom: 49px;
+  }
+
+  .hero__button {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-s;
+    padding: 14px 26px;
+    width: fit-content;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: 100%;
+    order: 3;
+    margin-top: -75px;
+    z-index: -1;
+  }
 }

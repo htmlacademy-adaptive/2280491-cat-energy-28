@@ -16,7 +16,7 @@
   order: 2;
   font-family: v.$secondary-font;
   font-weight: 400;
-  font-size: v.$font-size-3xs;
+  font-size: v.$font-size-4xs;
   line-height: v.$line-height-4xs;
   text-align: center;
   margin-top: -8px;
@@ -36,4 +36,17 @@
   width: 100%;
   padding: 14px 0 17px;
   margin: 0;
+}
+
+@media (min-width: v.$tablet-width) {
+  .result-data__descr {
+    font-size: v.$font-size-l;
+    line-height: v.$line-height-2xl;
+  }
+
+  .result-data__parameter {
+    font-size: v.$font-size-3xs;
+    line-height: v.$line-height-3xs;
+    background-color: v.$white-color;
+  }
 }

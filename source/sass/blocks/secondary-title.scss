@@ -8,3 +8,10 @@
   color: v.$black-color;
   margin: 0;
 }
+
+@media (min-width: v.$tablet-width) {
+  .secondary-title {
+    font-size: v.$font-size-2xl;
+    line-height: v.$line-height-4xl;
+  }
+}

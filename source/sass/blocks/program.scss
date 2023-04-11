@@ -61,7 +61,7 @@
 }
 
 .program__descr {
-  @include m.text-style-small;
+  @include m.text-small;
   color: v.$color-gray-400;
   margin-top: 29px;
   padding-bottom: 23px;
@@ -70,7 +70,7 @@
 
 .program__link {
   font-family: v.$primary-font;
-  font-size: v.$font-size-xs;
+  font-size: v.$font-size-2xs;
   line-height: v.$line-height-2xs;
   text-transform: uppercase;
   text-decoration: none;
@@ -80,4 +80,40 @@
   background-repeat: no-repeat;
   background-position: center right;
   padding: 4px 39px 4px 0;
+}
+
+@media (min-width: v.$tablet-width) {
+  .program__item {
+    padding: 77px 62px 53px 52px;
+  }
+
+  .program__title {
+    font-size: v.$font-size-xl;
+    line-height: v.$line-height-2xl;
+    margin-left: 0;
+  }
+
+  .program__descr {
+    @include m.text-small-big-screen;
+  }
+
+  .program__link {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .program__wrapper {
+    display: flex;
+  }
+
+  .program__item {
+    margin-right: 80px;
+    flex: 1;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

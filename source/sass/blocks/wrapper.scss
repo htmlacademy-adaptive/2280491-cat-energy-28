@@ -1,4 +1,18 @@
+@use "variables" as v;
+
 .wrapper {
   width: 280px;
   margin: 0 auto;
+}
+
+@media (min-width: v.$tablet-width) {
+  .wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .wrapper {
+    width: 1220px;
+  }
 }

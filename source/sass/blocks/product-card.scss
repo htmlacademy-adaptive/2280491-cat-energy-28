@@ -12,7 +12,7 @@
 .product-card__title {
   font-family: v.$primary-font;
   font-weight: 400;
-  font-size: v.$font-size-xs;
+  font-size: v.$font-size-2xs;
   line-height: v.$line-height-s;
   color: v.$color-gray-500;
   text-transform: uppercase;
@@ -21,11 +21,13 @@
 .product-card__table-data {
   font-family: v.$secondary-font;
   font-weight: 400;
-  font-size: v.$font-size-3xs;
+  font-size: v.$font-size-4xs;
   line-height: v.$line-height-2xs;
   color: v.$color-gray-400;
 }
 
 .product-card__button {
   width: 100%;
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-s;
 }

@@ -23,5 +23,22 @@
   padding-bottom: 24px;
   border-top: 1px solid #e6e6e6;
   text-align: center;
-  width: 100%;
+}
+
+@media (min-width: v.$tablet-width) {
+
+  .main-nav__list {
+    display: flex;
+    margin-top: 18px;
+  }
+
+  .main-nav__link {
+    font-weight: 400;
+    font-size: v.$font-size-xs;
+    line-height: v.$line-height-m;
+    padding: 0;
+    border-top: none;
+    text-align: start;
+    margin-right: 35px;
+  }
 }

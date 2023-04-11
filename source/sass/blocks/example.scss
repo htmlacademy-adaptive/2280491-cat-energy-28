@@ -11,7 +11,7 @@
 }
 
 .example__result-descr {
-  @include m.text-style-small;
+  @include m.text-small;
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -24,10 +24,30 @@
 .example__costs {
   font-family: v.$primary-font;
   font-weight: 400;
-  font-size: v.$font-size-2xs;
+  font-size: v.$font-size-3xs;
   line-height: v.$line-height-s;
   text-transform: uppercase;
   text-align: center;
   display: block;
   margin-top: 20px;
+}
+
+@media (min-width: v.$tablet-width) {
+  .example {
+    background-color: v.$white-color;
+  }
+
+  .example__wrapper {
+    padding-top: 43px;
+    padding-bottom: 0;
+  }
+
+  .example__result-descr {
+    @include m.text-small-big-screen;
+  }
+
+  .example__costs {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-s;
+  }
 }

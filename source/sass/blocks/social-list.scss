@@ -1,13 +1,6 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-.social-list {
-  @include m.list-reset;
-  display: flex;
-  padding: 20px 0;
-  justify-content: center;
-}
-
 .social-list__item {
   margin-right: 24px;
 

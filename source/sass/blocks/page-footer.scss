@@ -18,9 +18,18 @@
 
 .page-footer__social-list {
   border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0;
+  @include m.list-reset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-footer__copyright-link {
+  font-family: v.$secondary-font;
+  font-weight: 400;
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-xs;
   text-decoration: none;
   color: v.$color-gray-400;
   background-image: url("../img/academy-logo.svg");
@@ -28,5 +37,34 @@
   background-position: center right;
   width: 100%;
   padding: 20px 0;
-  display: block;
+}
+
+@media (min-width: v.$tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 0;
+  }
+
+  .page-footer__logo {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .page-footer__social-list {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .page-footer__copyright-link {
+    padding: 0;
+    width: auto;
+    padding: 9px 54px 9px 0;
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .page-footer__wrapper {
+    padding: 66px 0;
+  }
 }
