@@ -26,3 +26,22 @@
   line-height: v.$line-height-2xs;
   text-align: center;
 }
+
+@media (min-width: v.$tablet-width) {
+  .order-form__legend {
+    font-size: v.$font-size-xl;
+    line-height: v.$line-height-2xl;
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .order-form {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 67px 80px;
+  }
+
+  .order-form__button {
+    max-height: 52px;
+  }
+}

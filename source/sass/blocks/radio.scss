@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .radio__text {
   font-family: v.$primary-font;
@@ -7,4 +8,10 @@
   line-height: v.$line-height-xs;
   text-transform: uppercase;
   color: v.$color-gray-500;
+}
+
+@media (min-width: v.$tablet-width) {
+  .radio__text {
+    @include m.form-small-text-big-screen;
+  }
 }

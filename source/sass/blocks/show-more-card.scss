@@ -19,8 +19,20 @@
 }
 
 .show-more-card__button {
-  background-color: #f2f2f2;
+  background-color: v.$color-gray-50;
   border: none;
   color: v.$color-gray-400;
   width: 100%;
+}
+
+@media (min-width: v.$tablet-width) {
+  .show-more-card__title {
+    font-size: v.$font-size-s;
+    line-height: 22px;
+  }
+
+  .show-more-card__text {
+    font-size: v.$font-size-2xs;
+    line-height: v.$line-height-xs;
+  }
 }

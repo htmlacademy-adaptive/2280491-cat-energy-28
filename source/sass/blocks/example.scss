@@ -10,10 +10,16 @@
   padding-bottom: 40px;
 }
 
+.example__info {
+  display: flex;
+  flex-direction: column;
+}
+
 .example__result-descr {
   @include m.text-small;
   margin-top: 40px;
   margin-bottom: 20px;
+  color: v.$color-gray-400;
 }
 
 .example__result-data-wrapper {
@@ -42,6 +48,16 @@
     padding-bottom: 0;
   }
 
+  .example__result-costs-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__result-data-wrapper {
+    flex: 1;
+    margin-right: 67px;
+  }
+
   .example__result-descr {
     @include m.text-small-big-screen;
   }
@@ -49,5 +65,15 @@
   .example__costs {
     font-size: v.$font-size-s;
     line-height: v.$line-height-s;
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .example__result-costs-wrapper {
+    flex-direction: column;
+  }
+
+  .example__info-slider {
+    display: flex;
   }
 }

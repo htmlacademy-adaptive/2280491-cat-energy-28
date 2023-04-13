@@ -31,3 +31,29 @@
   font-size: v.$font-size-2xs;
   line-height: v.$line-height-s;
 }
+
+@media (min-width: v.$tablet-width) {
+  .product-card {
+    padding: 0 36px 39px 36px;
+  }
+
+  .product-card__title {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-m;
+  }
+
+  .product-card__table-data {
+    font-size: v.$font-size-2xs;
+    line-height: v.$line-height-2xs;
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .product-card {
+    padding: 0 30px 40px 35px;
+  }
+
+  .product-card__title {
+    line-height: v.$line-height-s
+  }
+}

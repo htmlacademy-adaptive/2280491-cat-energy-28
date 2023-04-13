@@ -1,10 +1,6 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-.page-main__wrapper {
-  border-top: 1px solid #e6e6e6;
-}
-
 .page-main__title {
   margin-top: 27px;
 
@@ -25,4 +21,38 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
+}
+
+@media (min-width: v.$tablet-width) {
+  .page-main__title {
+    margin-top: 65px;
+
+    &--form {
+      margin-bottom: 54px;
+    }
+
+    &--catalog {
+      margin-bottom: 82px;
+    }
+  }
+
+  .page-main__subheader {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+    margin-bottom: 66px;
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .page-main__title {
+    margin-top: 77px;
+
+    &--form {
+      margin-bottom: 56px;
+    }
+
+    &--catalog {
+      margin-bottom: 84px;
+    }
+  }
 }

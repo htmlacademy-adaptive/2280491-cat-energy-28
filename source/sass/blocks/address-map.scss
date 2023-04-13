@@ -1,5 +1,25 @@
+@use "variables" as v;
 @use "mixins" as m;
+
+.address-map {
+  background-color: v.$color-gray-50;
+}
+
+.address-map__address {
+  display: flex;
+}
 
 .address-map__image {
   margin-left: -20px;
+}
+
+@media (min-width: v.$desktop-width) {
+  .address-map__wrapper {
+    position: relative;
+  }
+
+  .address-map__address {
+    position: absolute;
+    background-color: v.$white-color;
+  }
 }

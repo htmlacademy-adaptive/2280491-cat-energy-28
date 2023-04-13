@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .checkbox__text {
   font-family: v.$primary-font;
@@ -6,4 +7,10 @@
   font-size: v.$font-size-2xs;
   line-height: v.$line-height-xs;
   text-transform: uppercase;
+}
+
+@media (min-width: v.$tablet-width) {
+  .checkbox__text {
+    @include m.form-small-text-big-screen;
+  }
 }

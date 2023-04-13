@@ -83,8 +83,14 @@
 }
 
 @media (min-width: v.$tablet-width) {
+  .program__wrapper {
+    margin-top: 0;
+    padding-bottom: 15px;
+  }
+
   .program__item {
     padding: 77px 62px 53px 52px;
+    margin-bottom: 30px;
   }
 
   .program__title {
@@ -106,10 +112,13 @@
 @media (min-width: v.$desktop-width) {
   .program__wrapper {
     display: flex;
+    padding-top: 82px;
+    padding-bottom: 71px;
   }
 
   .program__item {
     margin-right: 80px;
+    margin-bottom: 0px;
     flex: 1;
 
     &:last-child {

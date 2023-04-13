@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .form-field__label {
   font-family: v.$primary-font;
@@ -7,4 +8,10 @@
   line-height: v.$line-height-xs;
   color: v.$color-gray-400;
   text-transform: uppercase;
+}
+
+@media (min-width: v.$tablet-width) {
+  .form-field__label {
+    @include m.form-small-text-big-screen;
+  }
 }

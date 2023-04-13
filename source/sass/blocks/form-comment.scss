@@ -1,0 +1,8 @@
+@use "variables" as v;
+
+@media (min-width: v.$desktop-width) {
+  .form-comment {
+    grid-column: 1/3;
+    grid-row: 3;
+  }
+}
