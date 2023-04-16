@@ -1,18 +1,15 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .wrapper {
   width: 280px;
   margin: 0 auto;
-}
 
-@media (min-width: v.$tablet-width) {
-  .wrapper {
+  @include m.breakpoint(medium) {
     width: 708px;
   }
-}
 
-@media (min-width: v.$desktop-width) {
-  .wrapper {
+  @include m.breakpoint(large) {
     width: 1220px;
   }
 }

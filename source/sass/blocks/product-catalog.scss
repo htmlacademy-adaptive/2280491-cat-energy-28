@@ -3,20 +3,16 @@
 
 .product-catalog {
   @include m.list-reset;
-}
 
-@media (min-width: v.$tablet-width) {
-  .product-catalog {
+  @include m.breakpoint(medium) {
     display: grid;
-    grid-template-columns: 324px 324px;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: end;
   }
-}
 
-@media (min-width: v.$desktop-width) {
-  .product-catalog {
-    grid-template-columns: repeat(4, 245px);
+  @include m.breakpoint(large) {
+    grid-template-columns: repeat(4, 1fr);
     gap: 80px;
   }
 }

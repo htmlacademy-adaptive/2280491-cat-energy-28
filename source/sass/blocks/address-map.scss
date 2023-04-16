@@ -7,19 +7,24 @@
 
 .address-map__address {
   display: flex;
-}
 
-.address-map__image {
-  margin-left: -20px;
-}
-
-@media (min-width: v.$desktop-width) {
-  .address-map__wrapper {
-    position: relative;
-  }
-
-  .address-map__address {
+  @include m.breakpoint(large) {
     position: absolute;
     background-color: v.$white-color;
   }
+}
+
+.address-map__map-wrapper {
+  height: 362px;
+  width: 100%;
+  overflow: hidden;
+
+  @include m.breakpoint(large) {
+    position: relative;
+  }
+}
+
+.address-map__image {
+  width: 100%;
+  height: auto;
 }

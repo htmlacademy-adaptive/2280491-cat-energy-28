@@ -7,10 +7,13 @@
   font-size: v.$font-size-2xs;
   line-height: v.$line-height-xs;
   text-transform: uppercase;
-}
 
-@media (min-width: v.$tablet-width) {
-  .checkbox__text {
-    @include m.form-small-text-big-screen;
+  @include m.breakpoint(medium) {
+    font-family: v.$primary-font;
+    font-weight: 400;
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+    text-transform: uppercase;
+    color: v.$color-gray-400;
   }
 }

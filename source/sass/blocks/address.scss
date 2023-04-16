@@ -13,6 +13,11 @@
   text-transform: uppercase;
   margin: 0;
   flex: 1;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-l;
+  }
 }
 
 .address__location {
@@ -22,15 +27,8 @@
   line-height: v.$line-height-s;
   color: v.$color-gray-400;
   font-style: normal;
-}
 
-@media (min-width: v.$tablet-width) {
-  .address__dealers {
-    font-size: v.$font-size-s;
-    line-height: v.$line-height-l;
-  }
-
-  .address__location {
+  @include m.breakpoint(medium) {
     font-size: v.$font-size-2xs;
     line-height: v.$line-height-s;
   }

@@ -15,6 +15,12 @@
     opacity: 85%;
     z-index: -1;
   }
+
+  @include m.breakpoint(medium) {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .hero__wrapper {
@@ -36,12 +42,37 @@
     background-color: #f2f2f2;
     z-index: -2;
   }
+
+  @include m.breakpoint(medium) {
+    align-items: start;
+    padding-left: 88px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include m.breakpoint(large) {
+    padding-left: 80px;
+    position: relative;
+    padding-bottom: 185px;
+  }
 }
 
 .hero__title {
   color: v.$white-color;
   margin-top: 27px;
   text-align: center;
+
+  @include m.breakpoint(medium) {
+    color: v.$black-color;
+    margin-top: 62px;
+    text-align: start;
+  }
+
+  @include m.breakpoint(large) {
+    margin-top: 111px;
+  }
 }
 
 .hero__slogan {
@@ -53,11 +84,36 @@
   margin-top: 25px;
   display: block;
   text-align: center;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-s;
+    color: v.$black-color;
+    margin-top: 41px;
+    margin-bottom: 49px;
+  }
 }
 
 .hero__image {
   display: block;
   margin-top: 29px;
+
+  @include m.breakpoint(medium) {
+    width: 100%;
+    height: auto;
+    order: 3;
+    margin-top: -75px;
+    z-index: -1;
+  }
+
+  @include m.breakpoint(large) {
+    position: absolute;
+    margin-top: 0;
+    height: 500px;
+    width: auto;
+    top: 32px;
+    left: 448px;
+  }
 }
 
 .hero__button {
@@ -67,71 +123,11 @@
   padding: 7px 0;
   box-sizing: border-box;
   text-align: center;
-}
 
-@media (min-width: v.$tablet-width) {
-  .hero {
-    &::before {
-      display: none;
-    }
-  }
-
-  .hero__wrapper {
-    align-items: start;
-    padding-left: 88px;
-
-    &::after {
-      display: none;
-    }
-  }
-
-  .hero__title {
-    color: v.$black-color;
-    margin-top: 62px;
-    text-align: start;
-  }
-
-  .hero__slogan {
-    font-size: v.$font-size-s;
-    line-height: v.$line-height-s;
-    color: v.$black-color;
-    margin-top: 41px;
-    margin-bottom: 49px;
-  }
-
-  .hero__button {
+  @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-s;
     padding: 14px 26px;
     width: fit-content;
-  }
-
-  .hero__image {
-    width: 100%;
-    height: auto;
-    order: 3;
-    margin-top: -75px;
-    z-index: -1;
-  }
-}
-
-@media (min-width: v.$desktop-width) {
-  .hero__wrapper {
-    padding-left: 80px;
-    position: relative;
-    padding-bottom: 185px;
-  }
-
-  .hero__title {
-    margin-top: 111px;
-  }
-
-  .hero__image {
-    position: absolute;
-    margin-top: 0;
-    height: 500px;
-    width: auto;
-    top: 32px;
-    left: 448px;
   }
 }

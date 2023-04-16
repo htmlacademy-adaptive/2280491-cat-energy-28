@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .secondary-title {
   font-family: v.$primary-font;
@@ -7,10 +8,8 @@
   line-height: v.$line-height-3xl;
   color: v.$black-color;
   margin: 0;
-}
 
-@media (min-width: v.$tablet-width) {
-  .secondary-title {
+  @include m.breakpoint(medium) {
     font-size: v.$font-size-2xl;
     line-height: v.$line-height-4xl;
   }

@@ -16,15 +16,6 @@
   color: v.$black-color;
 }
 
-@mixin form-small-text-big-screen {
-  font-family: v.$primary-font;
-  font-weight: 400;
-  font-size: v.$font-size-s;
-  line-height: v.$line-height-xl;
-  text-transform: uppercase;
-  color: v.$color-gray-400;
-}
-
 @mixin list-reset {
   margin: 0;
   padding: 0;
@@ -35,4 +26,10 @@
   border: none;
   padding: 0;
   margin: 0;
+}
+
+@mixin breakpoint($breakpoint) {
+  @media (min-width: map-get(v.$breakpoints, $breakpoint)) {
+    @content;
+  }
 }

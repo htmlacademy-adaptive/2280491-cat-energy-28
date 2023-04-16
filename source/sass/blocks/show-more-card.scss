@@ -8,6 +8,11 @@
   line-height: v.$line-height-s;
   color: #111111;
   text-transform: uppercase;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
+    line-height: 22px;
+  }
 }
 
 .show-more-card__text {
@@ -16,6 +21,11 @@
   font-size: v.$font-size-4xs;
   line-height: v.$line-height-2xs;
   color: v.$color-gray-400;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-2xs;
+    line-height: v.$line-height-xs;
+  }
 }
 
 .show-more-card__button {
@@ -23,16 +33,4 @@
   border: none;
   color: v.$color-gray-400;
   width: 100%;
-}
-
-@media (min-width: v.$tablet-width) {
-  .show-more-card__title {
-    font-size: v.$font-size-s;
-    line-height: 22px;
-  }
-
-  .show-more-card__text {
-    font-size: v.$font-size-2xs;
-    line-height: v.$line-height-xs;
-  }
 }

@@ -8,10 +8,13 @@
   line-height: v.$line-height-xs;
   text-transform: uppercase;
   color: v.$color-gray-500;
-}
 
-@media (min-width: v.$tablet-width) {
-  .radio__text {
-    @include m.form-small-text-big-screen;
+  @include m.breakpoint(medium) {
+    font-family: v.$primary-font;
+    font-weight: 400;
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+    text-transform: uppercase;
+    color: v.$color-gray-400;
   }
 }

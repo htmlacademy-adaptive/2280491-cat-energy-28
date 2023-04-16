@@ -39,5 +39,10 @@ $line-height-3xs: 14px;
 $line-height-4xs: 12px;
 
 // Viewports
-$tablet-width: 708px;
-$desktop-width: 1220px;
+$medium-breakpoint: 758px;
+$large-breakpoint: 1270px;
+
+$breakpoints: (
+  "medium": $medium-breakpoint,
+  "large": $large-breakpoint
+);

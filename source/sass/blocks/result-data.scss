@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .result-data {
   display: flex;
@@ -22,6 +23,12 @@
   margin-top: -8px;
   background-color: #eaeaea;
   width: 87px;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-3xs;
+    line-height: v.$line-height-3xs;
+    background-color: v.$white-color;
+  }
 }
 
 .result-data__descr {
@@ -36,17 +43,9 @@
   width: 100%;
   padding: 14px 0 17px;
   margin: 0;
-}
 
-@media (min-width: v.$tablet-width) {
-  .result-data__descr {
+  @include m.breakpoint(medium) {
     font-size: v.$font-size-l;
     line-height: v.$line-height-2xl;
-  }
-
-  .result-data__parameter {
-    font-size: v.$font-size-3xs;
-    line-height: v.$line-height-3xs;
-    background-color: v.$white-color;
   }
 }
