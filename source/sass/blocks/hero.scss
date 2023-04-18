@@ -25,7 +25,6 @@
 
 .hero__wrapper {
   position: relative;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,7 +120,6 @@
   font-size: v.$font-size-3xs;
   line-height: v.$line-height-xs;
   padding: 7px 0;
-  box-sizing: border-box;
   text-align: center;
 
   @include m.breakpoint(medium) {
