@@ -2,14 +2,21 @@
 @use "mixins" as m;
 
 .address-map {
-  background-color: v.$color-gray-50;
+  background-color: v.$white-color;
 }
 
 .address-map__address {
-  display: flex;
+  width: 280px;
+  margin: 0 auto;
+
+  @include m.breakpoint(medium) {
+    width: 708px;
+  }
 
   @include m.breakpoint(large) {
+    width: 565px;
     position: absolute;
+    z-index: 1;
     background-color: v.$white-color;
   }
 }
@@ -27,4 +34,15 @@
 .address-map__image {
   width: 100%;
   height: auto;
+  display: block;
+}
+
+.address-map__map {
+  border: none;
+  display: block;
+  width: 100%;
+
+  @include m.breakpoint(medium) {
+    height: 400px;
+  }
 }

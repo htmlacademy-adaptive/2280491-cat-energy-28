@@ -3,9 +3,21 @@
 
 .example {
   background-color: #eaeaea;
+  position: relative;
 
   @include m.breakpoint(medium) {
-    background-color: v.$white-color;
+    background-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 462px;
+      background-color: v.$color-gray-50;
+      bottom: 0;
+      z-index: -1;
+    }
   }
 }
 
@@ -20,11 +32,20 @@
 
   @include m.breakpoint(large) {
     padding-bottom: 75px;
+
   }
 }
 
 .example__title {
-  margin-bottom: 63px;
+  margin-bottom: 40px;
+
+  @include m.breakpoint(medium) {
+    margin-bottom: 63px;
+  }
+
+  @include m.breakpoint(large) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__info {
@@ -34,12 +55,17 @@
 
 .example__result-descr {
   @include m.text-small;
-  margin-top: 40px;
+  margin-top: 0;
   margin-bottom: 20px;
   color: v.$color-gray-400;
 
   @include m.breakpoint(medium) {
     @include m.text-small-big-screen;
+    margin-bottom: 54px;
+  }
+
+  @include m.breakpoint(large) {
+    margin-right: 138px;
   }
 }
 
@@ -49,7 +75,12 @@
 
   @include m.breakpoint(medium) {
     flex: 1;
-    margin-right: 67px;
+    margin-right: 167px;
+  }
+
+  @include m.breakpoint(large) {
+    margin-bottom: 55px;
+    margin-right: 204px;
   }
 }
 
@@ -57,10 +88,12 @@
   @include m.breakpoint(medium) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
   }
 
   @include m.breakpoint(large) {
     flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
@@ -77,6 +110,22 @@
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-s;
+    text-align: right;
+  }
+
+  @include m.breakpoint(large) {
+    text-align: left;
+  }
+}
+
+.example__costs-text {
+  @include m.breakpoint(medium) {
+    display: block;
+  }
+
+  @include m.breakpoint(large) {
+    display: inline;
+    margin-right: 63px;
   }
 }
 

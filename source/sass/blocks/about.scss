@@ -11,6 +11,10 @@
 
 .about__title {
   margin-bottom: 40px;
+
+  @include m.breakpoint(medium) {
+    margin-bottom: 72px;
+  }
 }
 
 .about__list {
@@ -76,15 +80,56 @@
     padding-top: 110px;
     padding-bottom: 45px;
     margin-bottom: 0;
+    position: relative;
 
     &::before {
       width: 80px;
       height: 80px;
       top: 0;
     }
+
+    &--healthy::after {
+      @include m.number-about;
+      content:"1";
+      right: 95px;
+    }
+
+    &--powder::after {
+      @include m.number-about;
+      content:"2";
+      right: 79px;
+    }
+
+    &--food::after {
+      @include m.number-about;
+      content:"3";
+      right: 78px;
+    }
+
+    &--time::after {
+      @include m.number-about;
+      content:"4";
+      right: 75px;
+    }
   }
 
   @include m.breakpoint(large) {
     padding-right: 0;
+
+    &--healthy::after {
+      right: 0;
+    }
+
+    &--powder::after {
+      right: 0;
+    }
+
+    &--food::after {
+      right: 0;
+    }
+
+    &--time::after {
+      right: 0;
+    }
   }
 }

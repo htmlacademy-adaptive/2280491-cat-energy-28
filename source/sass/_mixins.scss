@@ -13,7 +13,7 @@
   font-weight: 400;
   font-size: v.$font-size-2xs;
   line-height: v.$line-height-m;
-  color: v.$black-color;
+  color: v.$color-gray-400;
 }
 
 @mixin list-reset {
@@ -26,6 +26,16 @@
   border: none;
   padding: 0;
   margin: 0;
+}
+
+@mixin number-about {
+  font-family: "Oswald", sans-serif;
+  font-size: 280px;
+  line-height: 280px;
+  color: v.$color-gray-50;
+  position: absolute;
+  top: -40px;
+  z-index: -1;
 }
 
 @mixin breakpoint($breakpoint) {
