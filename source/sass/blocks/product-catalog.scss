@@ -3,4 +3,16 @@
 
 .product-catalog {
   @include m.list-reset;
+
+  @include m.breakpoint(medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+  }
+
+  @include m.breakpoint(large) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
 }

@@ -1,6 +1,13 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.form-options {
+  @include m.breakpoint(large) {
+    grid-column: 1/3;
+    grid-row: 4;
+  }
+}
+
 .form-options__list {
   @include m.list-reset;
   margin-bottom: 34px;

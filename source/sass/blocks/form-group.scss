@@ -1,13 +1,13 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .form-group {
   padding-bottom: 24px;
-}
 
-.form-group__legend {
-  font-family: v.$primary-font;
-  font-weight: 400;
-  font-size: v.$font-size-m;
-  line-height: v.$line-height-l;
-  margin-bottom: 35px;
+  @include m.breakpoint(large) {
+    &--contacts {
+      grid-column: 1/3;
+      grid-row: 2;
+    }
+  }
 }

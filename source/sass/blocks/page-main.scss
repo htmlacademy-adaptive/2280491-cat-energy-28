@@ -1,10 +1,6 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-.page-main__wrapper {
-  border-top: 1px solid #e6e6e6;
-}
-
 .page-main__title {
   margin-top: 27px;
 
@@ -15,14 +11,44 @@
   &--catalog {
     margin-bottom: 41px;
   }
+
+  @include m.breakpoint(medium) {
+    margin-top: 65px;
+
+    &--form {
+      margin-bottom: 54px;
+    }
+
+    &--catalog {
+      margin-bottom: 82px;
+    }
+  }
+
+  @include m.breakpoint(large) {
+    margin-top: 77px;
+
+    &--form {
+      margin-bottom: 56px;
+    }
+
+    &--catalog {
+      margin-bottom: 84px;
+    }
+  }
 }
 
 .page-main__subheader {
   font-family: v.$primary-font;
   font-weight: 400;
-  font-size: v.$font-size-2xs;
+  font-size: v.$font-size-3xs;
   line-height: v.$line-height-xs;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+    margin-bottom: 66px;
+  }
 }

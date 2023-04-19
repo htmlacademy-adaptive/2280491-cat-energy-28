@@ -1,10 +1,15 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .main-title {
   font-family: v.$primary-font;
   font-weight: 400;
   font-size: v.$font-size-xl;
   line-height: v.$line-height-2xl;
-  color: v.$black-color;
   margin: 0;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-2xl;
+    line-height: v.$line-height-4xl;
+  }
 }

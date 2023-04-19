@@ -3,6 +3,18 @@
 
 .program__wrapper {
   margin-top: 20px;
+
+  @include m.breakpoint(medium) {
+    margin-top: 0;
+    padding-bottom: 45px;
+  }
+
+  @include m.breakpoint(large) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding-bottom: 70px;
+  }
 }
 
 .program__item {
@@ -10,7 +22,19 @@
   padding: 30px 20px 18px 20px;
   margin-bottom: 20px;
   position: relative;
-  box-sizing: border-box;
+
+  @include m.breakpoint(medium) {
+    padding: 77px 62px 53px 52px;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include m.breakpoint(large) {
+    margin-bottom: 0;
+  }
 }
 
 .program__title {
@@ -58,19 +82,29 @@
     top: 35px;
     left: 13px;
   }
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-xl;
+    line-height: v.$line-height-2xl;
+    margin-left: 0;
+  }
 }
 
 .program__descr {
-  @include m.text-style-small;
+  @include m.text-small;
   color: v.$color-gray-400;
   margin-top: 29px;
   padding-bottom: 23px;
   border-bottom: 1px solid #d9d9d9;
+
+  @include m.breakpoint(medium) {
+    @include m.text-small-big-screen;
+  }
 }
 
 .program__link {
   font-family: v.$primary-font;
-  font-size: v.$font-size-xs;
+  font-size: v.$font-size-2xs;
   line-height: v.$line-height-2xs;
   text-transform: uppercase;
   text-decoration: none;
@@ -80,4 +114,9 @@
   background-repeat: no-repeat;
   background-position: center right;
   padding: 4px 39px 4px 0;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+  }
 }

@@ -1,0 +1,9 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.form-comment {
+  @include m.breakpoint(large) {
+    grid-column: 1/3;
+    grid-row: 3;
+  }
+}

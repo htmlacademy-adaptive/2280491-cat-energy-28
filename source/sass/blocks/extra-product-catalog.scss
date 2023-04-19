@@ -3,6 +3,12 @@
 
 .extra-product-catalog {
   padding: 25px 0 19px;
+
+  @include m.breakpoint(large) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 80px;
+  }
 }
 
 .extra-product-catalog__title {
@@ -12,13 +18,49 @@
   line-height: v.$line-height-2xl;
   margin: 0;
   margin-bottom: 36px;
+
+  @include m.breakpoint(large) {
+    grid-column: 1/5;
+    grid-row: 1;
+    font-size: v.$font-size-xl;
+    line-height: v.$line-height-2xl;
+    margin-bottom: 80px;
+  }
 }
 
 .extra-product-catalog__list {
   @include m.list-reset;
+
+  @include m.breakpoint(large) {
+    grid-column: 1/4;
+    grid-row: 2;
+  }
 }
 
 .extra-product-catalog__item {
   border-top: 1px solid v.$color-gray-200;
   padding: 13px 0 19px;
+}
+
+.extra-product-catalog__present {
+  font-family: v.$secondary-font;
+  font-weight: 400;
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-s;
+  color: v.$white-color;
+  background-image:
+    linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../img/cat-present.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 59px 61px 43px 58px;
+  text-align: center;
+
+  @include m.breakpoint(large) {
+    grid-column: 4/5;
+    grid-row: 2;
+  }
 }

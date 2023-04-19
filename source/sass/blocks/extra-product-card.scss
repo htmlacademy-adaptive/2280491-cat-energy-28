@@ -1,15 +1,41 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.extra-product-card {
+  @include m.breakpoint(medium) {
+    padding: 26px 38px 28px 38px;
+    display: grid;
+    gap: 0 60px;
+  }
+
+  @include m.breakpoint(large) {
+    padding: 15px 0;
+    grid-template-columns: 1fr 80px 1fr 80px 1fr;
+    gap: 0;
+    align-items: center;
+  }
+}
+
 .extra-product-card__title {
   font-family: v.$primary-font;
   font-weight: 400;
-  font-size: v.$font-size-xs;
+  font-size: v.$font-size-2xs;
   line-height: v.$line-height-2xs;
   text-transform: uppercase;
   color: v.$color-gray-500;
   margin: 0;
   margin-bottom: 13px;
+
+  @include m.breakpoint(medium) {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+
+  @include m.breakpoint(large) {
+    grid-column: 1;
+    margin-bottom: 0;
+    grid-row: none;
+  }
 }
 
 .extra-product-card__table {
@@ -17,17 +43,46 @@
   justify-content: space-between;
   margin: 0;
   margin-bottom: 15px;
+
+  @include m.breakpoint(medium) {
+    grid-column: 2/3;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+
+  @include m.breakpoint(large) {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    grid-column: 3/5;
+    position: relative;
+    grid-row: none;
+  }
 }
 
 .extra-product-card__data {
   font-family: v.$secondary-font;
   font-weight: 400;
-  font-size: v.$font-size-xs;
+  font-size: v.$font-size-2xs;
   line-height: v.$line-height-3xs;
   color: v.$color-gray-400;
   margin: 0;
+
+  @include m.breakpoint(medium) {
+    padding-right: 20px;
+  }
 }
 
 .extra-product-card__button {
+  font-size: v.$font-size-2xs;
   width: 100%;
+
+  @include m.breakpoint(medium) {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+
+  @include m.breakpoint(large) {
+    grid-column: 5;
+    grid-row: none;
+  }
 }

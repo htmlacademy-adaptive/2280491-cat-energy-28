@@ -1,11 +1,15 @@
-@use "variables" as v;
-
 .logo {
   text-decoration: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  justify-items: center;
   align-items: center;
 }
 
 .logo__icon {
-  margin-right: 56px;
+  grid-column: 1/2;
+}
+
+.logo__text {
+  grid-column: 2/3;
 }

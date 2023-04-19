@@ -4,22 +4,32 @@
 .show-more-card__title {
   font-family: v.$primary-font;
   font-weight: 400;
-  font-size: v.$font-size-xs;
+  font-size: v.$font-size-2xs;
   line-height: v.$line-height-s;
   color: #111111;
   text-transform: uppercase;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
+    line-height: 22px;
+  }
 }
 
 .show-more-card__text {
   font-family: v.$secondary-font;
   font-weight: 400;
-  font-size: v.$font-size-3xs;
+  font-size: v.$font-size-4xs;
   line-height: v.$line-height-2xs;
   color: v.$color-gray-400;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-2xs;
+    line-height: v.$line-height-xs;
+  }
 }
 
 .show-more-card__button {
-  background-color: #f2f2f2;
+  background-color: v.$color-gray-50;
   border: none;
   color: v.$color-gray-400;
   width: 100%;

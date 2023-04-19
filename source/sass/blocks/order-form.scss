@@ -1,6 +1,14 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.order-form {
+  @include m.breakpoint(large) {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 67px 80px;
+  }
+}
+
 .order-form__group {
   @include m.form-reset;
 }
@@ -10,19 +18,28 @@
   font-weight: 400;
   font-size: v.$font-size-m;
   line-height: v.$line-height-l;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-xl;
+    line-height: v.$line-height-2xl;
+  }
 }
 
 .order-form__button {
+  font-size: v.$font-size-2xs;
   width: 100%;
   border: none;
-  padding: 7px 0;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
+  }
 }
 
 .order-form__hint {
   margin: 21px 0 32px;
   font-family: v.$secondary-font;
   font-weight: 400;
-  font-size: v.$font-size-2xs;
+  font-size: v.$font-size-3xs;
   line-height: v.$line-height-2xs;
   text-align: center;
 }

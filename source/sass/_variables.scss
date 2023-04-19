@@ -20,9 +20,10 @@ $font-size-xl: 36px;
 $font-size-l: 30px;
 $font-size-m: 24px;
 $font-size-s: 20px;
-$font-size-xs: 16px;
-$font-size-2xs: 14px;
-$font-size-3xs: 12px;
+$font-size-xs: 18px;
+$font-size-2xs: 16px;
+$font-size-3xs: 14px;
+$font-size-4xs: 12px;
 
 // Line-height
 $line-height-4xl: 60px;
@@ -36,3 +37,12 @@ $line-height-xs: 18px;
 $line-height-2xs: 16px;
 $line-height-3xs: 14px;
 $line-height-4xs: 12px;
+
+// Breakpoints
+$medium-breakpoint: 758px;
+$large-breakpoint: 1270px;
+
+$breakpoints: (
+  "medium": $medium-breakpoint,
+  "large": $large-breakpoint
+);
