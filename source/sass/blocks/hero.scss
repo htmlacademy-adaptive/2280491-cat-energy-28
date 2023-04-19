@@ -120,7 +120,6 @@
   font-size: v.$font-size-3xs;
   line-height: v.$line-height-xs;
   text-align: center;
-  width: 100%;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
