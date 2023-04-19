@@ -73,6 +73,7 @@
 }
 
 .extra-product-card__button {
+  font-size: v.$font-size-2xs;
   width: 100%;
 
   @include m.breakpoint(medium) {

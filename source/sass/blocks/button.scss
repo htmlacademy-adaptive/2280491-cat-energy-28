@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .button {
   background-color: v.$brand-color-500;
@@ -7,7 +8,16 @@
   color: v.$white-color;
   text-decoration: none;
   display: block;
-  padding: 10px 0;
   text-align: center;
   cursor: pointer;
+  padding: 7px 0;
+
+  @include m.breakpoint(medium) {
+    padding: 14px 0;
+  }
+
+  &--catalog {
+    padding: 10px 0;
+  }
 }
+

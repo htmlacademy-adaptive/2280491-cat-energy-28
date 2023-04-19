@@ -119,13 +119,12 @@
   width: 100%;
   font-size: v.$font-size-3xs;
   line-height: v.$line-height-xs;
-  padding: 7px 0;
   text-align: center;
+  width: 100%;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-s;
-    padding: 14px 26px;
-    width: fit-content;
+    width: 244px;
   }
 }

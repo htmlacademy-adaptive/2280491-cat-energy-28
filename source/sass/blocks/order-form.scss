@@ -26,12 +26,12 @@
 }
 
 .order-form__button {
+  font-size: v.$font-size-2xs;
   width: 100%;
   border: none;
-  padding: 7px 0;
 
-  @include m.breakpoint(large) {
-    max-height: 52px;
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
   }
 }
 
