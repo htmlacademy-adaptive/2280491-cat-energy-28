@@ -19,7 +19,6 @@
 
   @include m.breakpoint(large) {
     width: v.$large-breakpoint;
-    margin: 0 auto;
   }
 }
 

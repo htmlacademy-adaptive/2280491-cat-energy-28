@@ -2,8 +2,17 @@
 @use "mixins" as m;
 
 .address {
+  @include m.breakpoint(large) {
+    padding-top: 95px;
+    padding-bottom: 107px;
+    pointer-events: none;
+  }
+}
+
+.address__wrapper {
   display: flex;
   padding: 26px 0 26px;
+  background-color: v.$white-color;
 
   @include m.breakpoint(medium) {
     display: grid;
@@ -13,6 +22,7 @@
   }
 
   @include m.breakpoint(large) {
+    width: 565px;
     padding: 56px 60px 56px 80px;
     gap: 80px;
   }
@@ -50,7 +60,7 @@
   @include m.breakpoint(medium) {
     font-size: v.$font-size-2xs;
     line-height: v.$line-height-s;
-    margin-left: 135px;
+    margin-left: 125px;
     text-align: right;
   }
 

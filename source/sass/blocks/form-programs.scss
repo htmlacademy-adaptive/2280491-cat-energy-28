@@ -1,12 +1,15 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.form-programs {
+  padding-top: 22px;
+  padding-bottom: 19px;
+}
+
+.form-programs__item {
+  margin-bottom: 13px;
+}
+
 .form-programs__list {
   @include m.list-reset;
-  padding: 20px 0;
-  border-top: 1px solid #d9d9d9;
-
-  @include m.breakpoint(medium) {
-    border: 1px solid #e7e7e7;
-  }
 }

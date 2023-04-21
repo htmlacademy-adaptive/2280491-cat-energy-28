@@ -1,6 +1,11 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.form-field {
+  display: flex;
+  align-items: center;
+}
+
 .form-field__label {
   font-family: v.$primary-font;
   font-weight: 400;
@@ -8,6 +13,8 @@
   line-height: v.$line-height-xs;
   color: v.$color-gray-400;
   text-transform: uppercase;
+  margin-right: 13px;
+  white-space: nowrap;
 
   @include m.breakpoint(medium) {
     font-family: v.$primary-font;
@@ -16,5 +23,39 @@
     line-height: v.$line-height-xl;
     text-transform: uppercase;
     color: v.$color-gray-400;
+  }
+}
+
+.form-field__input {
+  font-family: v.$primary-font;
+  font-weight: 400;
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-xs;
+  color: v.$color-gray-400;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 14px 15px 13px 20px;
+  border: 1px solid v.$color-gray-200;
+
+  &::placeholder {
+    color: v.$color-gray-400;
+  }
+
+  &--contacts {
+    padding-left: 15px;
+  }
+
+  &--owner-mail::placeholder {
+    background-image: url("../img/mail.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &--owner-phone::placeholder {
+    background-image: url("../img/phone.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right;
   }
 }

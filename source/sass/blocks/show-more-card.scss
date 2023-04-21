@@ -1,6 +1,47 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.show-more-card {
+  padding-top: 78px;
+  padding-bottom: 25px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 125px;
+  }
+
+  @include m.breakpoint(medium) {
+    padding: 38px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 2px solid v.$color-gray-50;
+
+    &::before {
+      background-size: 60px 60px;
+      width: 60px;
+      height: 60px;
+      top: 52px;
+      left: 132px;
+    }
+  }
+
+  @include m.breakpoint(large) {
+    &::before {
+      left: 92px;
+    }
+  }
+}
+
 .show-more-card__title {
   font-family: v.$primary-font;
   font-weight: 400;
@@ -8,10 +49,13 @@
   line-height: v.$line-height-s;
   color: #111111;
   text-transform: uppercase;
+  display: block;
+  text-align: center;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: 22px;
+    margin-top: 160px;;
   }
 }
 
@@ -21,16 +65,25 @@
   font-size: v.$font-size-4xs;
   line-height: v.$line-height-2xs;
   color: v.$color-gray-400;
+  text-align: center;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-2xs;
     line-height: v.$line-height-xs;
+    margin-top: 23px;
+    margin-bottom: 87px;
   }
 }
 
 .show-more-card__button {
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-s;
   background-color: v.$color-gray-50;
   border: none;
   color: v.$color-gray-400;
   width: 100%;
+
+  @include m.breakpoint(medium) {
+
+  }
 }
