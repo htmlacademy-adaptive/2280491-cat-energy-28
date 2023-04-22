@@ -58,4 +58,16 @@
     background-repeat: no-repeat;
     background-position: right;
   }
+
+  &--comment {
+    padding-left: 15px;
+    padding-right: 12px;
+    height: 150px;
+    margin-bottom: 23px;
+  }
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+  }
 }

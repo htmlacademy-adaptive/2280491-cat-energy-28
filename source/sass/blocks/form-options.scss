@@ -8,9 +8,27 @@
   }
 }
 
+.form-options__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include m.breakpoint(medium) {
+    margin-bottom: 0;
+  }
+}
+
 .form-options__list {
   @include m.list-reset;
   margin-bottom: 34px;
+
+  @include m.breakpoint(medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 60px;
+  }
 }
 
 .form-options__legend {

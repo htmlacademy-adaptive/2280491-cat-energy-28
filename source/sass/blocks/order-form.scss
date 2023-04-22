@@ -2,9 +2,12 @@
 @use "mixins" as m;
 
 .order-form {
-  @include m.breakpoint(large) {
+  @include m.breakpoint(medium) {
     display: grid;
-    grid-template-columns: 570px 570px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include m.breakpoint(large) {
     gap: 67px 80px;
   }
 }
@@ -18,10 +21,13 @@
   font-weight: 400;
   font-size: v.$font-size-m;
   line-height: v.$line-height-l;
+  display: block;
+  margin-bottom: 35px;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-xl;
     line-height: v.$line-height-2xl;
+    margin-bottom: 76px;
   }
 }
 

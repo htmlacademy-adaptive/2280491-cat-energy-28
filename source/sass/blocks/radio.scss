@@ -15,6 +15,11 @@
   top: 0;
   left: 0;
   margin-right: 15px;
+
+  @include m.breakpoint(medium) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .radio__input:checked + .radio__text::after {
@@ -27,6 +32,13 @@
   background-color: v.$brand-color-400;
   top: 8.5px;
   left: 8.5px;
+
+  @include m.breakpoint(medium) {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
 }
 
 .radio__text {
@@ -39,6 +51,7 @@
   position: relative;
   cursor: pointer;
   display: flex;
+  align-items: center;
 
   @include m.breakpoint(medium) {
     font-family: v.$primary-font;
