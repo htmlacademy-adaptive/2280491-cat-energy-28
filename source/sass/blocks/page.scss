@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .page__body {
   font-family: v.$primary-font;
@@ -8,4 +9,24 @@
   margin: 0;
   padding: 0;
   min-height: 100%;
+
+  &--main {
+    @include m.breakpoint(large) {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 694px;
+        background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/cat-large.png");
+        background-size: 1043px 696px;
+        background-color: v.$brand-color-500;
+        opacity: 85%;
+        z-index: -1;
+      }
+    }
+  }
 }

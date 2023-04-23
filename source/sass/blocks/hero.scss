@@ -70,7 +70,8 @@
   }
 
   @include m.breakpoint(large) {
-    margin-top: 111px;
+    margin-top: 115px;
+    width: 420px;
   }
 }
 

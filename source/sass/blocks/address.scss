@@ -12,7 +12,7 @@
 .address__wrapper {
   display: flex;
   padding: 26px 0 26px;
-  background-color: v.$white-color;
+  background-color: v.$color-gray-50;
 
   @include m.breakpoint(medium) {
     display: grid;
@@ -25,6 +25,7 @@
     width: 565px;
     padding: 56px 60px 56px 80px;
     gap: 80px;
+    background-color: v.$white-color;
   }
 }
 
