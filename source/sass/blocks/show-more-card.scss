@@ -55,7 +55,7 @@
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: 22px;
-    margin-top: 160px;;
+    margin-top: 160px;
   }
 }
 
@@ -82,8 +82,4 @@
   border: none;
   color: v.$color-gray-400;
   width: 100%;
-
-  @include m.breakpoint(medium) {
-
-  }
 }

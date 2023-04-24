@@ -99,7 +99,6 @@
 .product-card__table-row {
   @include m.breakpoint(medium) {
     border-bottom: 1px solid v.$color-gray-200;
-
   }
 }
 

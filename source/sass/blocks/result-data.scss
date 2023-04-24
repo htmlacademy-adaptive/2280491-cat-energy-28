@@ -37,7 +37,7 @@
   }
 
   @include m.breakpoint(large) {
-    background-color: v.$color-gray-50
+    background-color: v.$color-gray-50;
   }
 }
 

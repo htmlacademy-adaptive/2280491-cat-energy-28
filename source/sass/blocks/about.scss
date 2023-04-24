@@ -90,25 +90,25 @@
 
     &--healthy::after {
       @include m.number-about;
-      content:"1";
+      content: "1";
       right: 95px;
     }
 
     &--powder::after {
       @include m.number-about;
-      content:"2";
+      content: "2";
       right: 79px;
     }
 
     &--food::after {
       @include m.number-about;
-      content:"3";
+      content: "3";
       right: 78px;
     }
 
     &--time::after {
       @include m.number-about;
-      content:"4";
+      content: "4";
       right: 75px;
     }
   }
