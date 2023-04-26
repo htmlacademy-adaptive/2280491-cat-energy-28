@@ -5,7 +5,6 @@
   @include m.breakpoint(large) {
     padding-top: 95px;
     padding-bottom: 107px;
-    pointer-events: none;
   }
 }
 
@@ -26,6 +25,8 @@
     padding: 56px 60px 56px 80px;
     gap: 80px;
     background-color: v.$white-color;
+    z-index: 2;
+    position: relative;
   }
 }
 

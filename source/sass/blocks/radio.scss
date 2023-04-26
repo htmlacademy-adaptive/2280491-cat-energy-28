@@ -5,11 +5,10 @@
   display: none;
 }
 
-.radio__input + .radio__text::before {
+.radio__text::before {
   content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
+  width: 31px;
+  height: 31px;
   border-radius: 100%;
   border: 1px solid v.$color-gray-200;
   top: 0;
@@ -24,14 +23,13 @@
 
 .radio__input:checked + .radio__text::after {
   content: "";
-  display: block;
   position: absolute;
   width: 13px;
   height: 13px;
   border-radius: 100%;
   background-color: v.$brand-color-400;
-  top: 8.5px;
-  left: 8.5px;
+  top: 9px;
+  left: 9px;
 
   @include m.breakpoint(medium) {
     width: 18px;

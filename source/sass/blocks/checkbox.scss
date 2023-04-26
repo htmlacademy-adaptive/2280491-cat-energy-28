@@ -26,9 +26,8 @@
   display: none;
 }
 
-.checkbox__input + .checkbox__text::before {
+.checkbox__text::before {
   content: "";
-  display: block;
   width: 30px;
   height: 30px;
   border: 1px solid v.$color-gray-200;
@@ -42,22 +41,14 @@
   }
 }
 
-.checkbox__input:checked + .checkbox__text::after {
-  content: "";
-  display: block;
-  position: absolute;
+.checkbox__input:checked + .checkbox__text::before {
   background-image: url("../img/small-tick.svg");
   background-repeat: no-repeat;
-  width: 18px;
-  height: 14px;
-  top: 8px;
-  left: 6px;
+  background-size: 18px 14px;
+  background-position: center;
 
   @include m.breakpoint(medium) {
     background-image: url("../img/big-tick.svg");
-    width: 26px;
-    height: 26px;
-    top: 7px;
-    left: 7px;
+    background-size: 26px 26px;
   }
 }

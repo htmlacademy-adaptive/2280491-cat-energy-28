@@ -3,7 +3,9 @@
 
 .page-main__wrapper {
   @include m.breakpoint(medium) {
-    padding: 0 40px;
+    &--form {
+      padding: 0 40px;
+    }
   }
 }
 

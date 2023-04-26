@@ -28,16 +28,6 @@
   margin: 0;
 }
 
-@mixin number-about {
-  font-family: "Oswald", sans-serif;
-  font-size: 280px;
-  line-height: 280px;
-  color: v.$color-gray-50;
-  position: absolute;
-  top: -40px;
-  z-index: -1;
-}
-
 @mixin breakpoint($breakpoint) {
   @media (min-width: map-get(v.$breakpoints, $breakpoint)) {
     @content;
