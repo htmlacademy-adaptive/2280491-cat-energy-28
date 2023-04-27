@@ -33,13 +33,14 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -20px;
-    width: 320px;
+    left: calc(50% - 50vw);
+    width: 100vw;
     height: 302px;
     background: url("../img/bg-cat-hero.png");
     background-repeat: no-repeat;
-    background-color: #f2f2f2;
     z-index: -2;
+    background-position: center;
+    background-color: #444348;
   }
 
   @include m.breakpoint(medium) {

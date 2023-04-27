@@ -8,6 +8,14 @@
   }
 }
 
+.form-options__legend {
+  margin-bottom: 34px;
+
+  @include m.breakpoint(medium) {
+    margin-bottom: 57px;
+  }
+}
+
 .form-options__item {
   margin-bottom: 12px;
 
@@ -23,6 +31,7 @@
 .form-options__list {
   @include m.list-reset;
   margin-bottom: 34px;
+  clear: both;
 
   @include m.breakpoint(medium) {
     display: grid;
@@ -35,13 +44,5 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 0 80px;
     margin-bottom: 0;
-  }
-}
-
-.form-options__legend {
-  margin-bottom: 34px;
-
-  @include m.breakpoint(medium) {
-    margin-bottom: 57px;
   }
 }

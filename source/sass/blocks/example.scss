@@ -43,7 +43,7 @@
   }
 
   @include m.breakpoint(large) {
-    margin-bottom: 146px;
+    margin-bottom: -60px;
   }
 }
 
@@ -105,11 +105,13 @@
   text-align: center;
   display: block;
   margin-top: 20px;
+  margin-bottom: 20px;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-s;
     text-align: right;
+    margin-bottom: 0;
   }
 
   @include m.breakpoint(large) {
@@ -133,6 +135,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+    align-items: end;
   }
 }
 

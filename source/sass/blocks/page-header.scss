@@ -8,7 +8,7 @@
   align-items: center;
 
   @include m.breakpoint(medium) {
-    width: v.$medium-breakpoint;
+    width: 708px;
     margin: 0 auto;
     padding-bottom: 0;
     display: flex;
@@ -18,7 +18,7 @@
 
   @include m.breakpoint(large) {
     padding-top: 69px;
-    width: v.$large-breakpoint;
+    width: 1220px;
   }
 }
 

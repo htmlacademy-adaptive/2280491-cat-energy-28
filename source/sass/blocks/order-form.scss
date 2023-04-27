@@ -10,13 +10,15 @@
   }
 
   @include m.breakpoint(large) {
-    gap: 67px 80px;
+    gap: 68px 80px;
     padding-bottom: 82px;
   }
 }
 
 .order-form__group {
   @include m.form-reset;
+  position: relative;
+
 
   @include m.breakpoint(medium) {
     grid-column: 1/3;
@@ -28,15 +30,14 @@
   font-weight: 400;
   font-size: v.$font-size-m;
   line-height: v.$line-height-l;
-  display: inline-block;
-  margin-bottom: 35px;
-  position: relative;
   background-color: v.$white-color;
   padding: 0 20px;
   margin-left: -20px;
+  float: left;
 
   &--contacts {
     width: 227px;
+    margin-bottom: 35px;
   }
 
   &::before {
@@ -45,7 +46,7 @@
     height: 4px;
     background-color: v.$brand-color-400;
     top: 15px;
-    left: calc((320px - 100vw) / 2);
+    left: calc(50% - 50vw);
     width: 100vw;
     z-index: -1;
   }
@@ -53,22 +54,15 @@
   @include m.breakpoint(medium) {
     font-size: v.$font-size-xl;
     line-height: v.$line-height-2xl;
-    margin-bottom: 76px;
 
     &--contacts {
-      width: 562px;
-      padding-top: 0;
+      width: fit-content;
+      grid-column: 1/-1;
+      margin-bottom: 76px;
     }
 
     &::before {
-      left: calc((668px - 100vw) / 2);
       top: 22px;
-    }
-  }
-
-  @include m.breakpoint(large) {
-    &::before {
-      left: calc((1180px - 100vw) / 2);
     }
   }
 }

@@ -1,6 +1,10 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.page-main {
+  overflow: hidden;
+}
+
 .page-main__wrapper {
   @include m.breakpoint(medium) {
     &--form {

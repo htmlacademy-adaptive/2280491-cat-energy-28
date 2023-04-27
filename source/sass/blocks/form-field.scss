@@ -4,6 +4,7 @@
 .form-field {
   display: flex;
   align-items: center;
+  clear: both;
 }
 
 .form-field__label {
@@ -64,9 +65,11 @@
     padding-left: 15px;
     padding-right: 12px;
     height: 150px;
+    margin-top: 38px;
     margin-bottom: 23px;
 
     @include m.breakpoint(medium) {
+      margin-top: 76px;
       margin-bottom: 65px;
     }
 

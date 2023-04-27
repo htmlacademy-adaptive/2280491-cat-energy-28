@@ -32,20 +32,18 @@
 }
 
 .slider__button {
-  @include m.breakpoint(medium) {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #666666;
-    border-radius: 100%;
-    background-color: v.$white-color;
-    top: calc(50% - 20px);
-    left: calc(50% - 20px);
-    background-image: url("../img/arrows-slider.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-  }
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #666666;
+  border-radius: 100%;
+  background-color: v.$white-color;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  background-image: url("../img/arrows-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 
 .slider__image {
@@ -54,6 +52,7 @@
     height: 256px;
     object-fit: cover;
     object-position: left;
+    grid-column: 1;
   }
 
   &:last-of-type {
@@ -61,6 +60,7 @@
     height: 256px;
     object-fit: cover;
     object-position: right;
+    grid-column: 2;
   }
 
   @include m.breakpoint(medium) {

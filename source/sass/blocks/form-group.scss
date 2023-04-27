@@ -23,20 +23,33 @@
     }
 
     &--contacts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 80px;
-      grid-column: 1/3;
-      grid-row: 2;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      // gap: 0 80px;
+      // grid-column: 1/3;
+      // grid-row: 2;
       margin-bottom: 0;
     }
   }
 }
 
+.form-group__list {
+  @include m.breakpoint(large) {
+    clear: both;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 80px;
+  }
+}
+
 .form-group__item {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include m.breakpoint(medium) {
+    margin-bottom: 20px;
   }
 }
