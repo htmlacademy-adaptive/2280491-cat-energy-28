@@ -8,9 +8,8 @@
   align-items: center;
 
   @include m.breakpoint(medium) {
-    width: v.$medium-breakpoint;
+    width: 708px;
     margin: 0 auto;
-    padding-top: 0;
     padding-bottom: 0;
     display: flex;
     justify-content: space-between;
@@ -18,8 +17,8 @@
   }
 
   @include m.breakpoint(large) {
-    width: v.$large-breakpoint;
-    margin: 0 auto;
+    padding-top: 69px;
+    width: 1220px;
   }
 }
 

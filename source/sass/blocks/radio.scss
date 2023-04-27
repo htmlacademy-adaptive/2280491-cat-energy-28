@@ -1,6 +1,44 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.radio__input {
+  display: none;
+}
+
+.radio__text::before {
+  content: "";
+  width: 31px;
+  height: 31px;
+  border-radius: 100%;
+  border: 1px solid v.$color-gray-200;
+  top: 0;
+  left: 0;
+  margin-right: 15px;
+
+  @include m.breakpoint(medium) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.radio__input:checked + .radio__text::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: v.$brand-color-400;
+  top: 9px;
+  left: 9px;
+
+  @include m.breakpoint(medium) {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
+}
+
 .radio__text {
   font-family: v.$primary-font;
   font-weight: 400;
@@ -8,6 +46,10 @@
   line-height: v.$line-height-xs;
   text-transform: uppercase;
   color: v.$color-gray-500;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 
   @include m.breakpoint(medium) {
     font-family: v.$primary-font;

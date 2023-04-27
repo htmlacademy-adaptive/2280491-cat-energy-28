@@ -11,6 +11,10 @@
 
 .about__title {
   margin-bottom: 40px;
+
+  @include m.breakpoint(medium) {
+    margin-bottom: 72px;
+  }
 }
 
 .about__list {
@@ -20,6 +24,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 90px 60px;
+    counter-reset: item;
   }
 
   @include m.breakpoint(large) {
@@ -76,15 +81,34 @@
     padding-top: 110px;
     padding-bottom: 45px;
     margin-bottom: 0;
+    position: relative;
 
     &::before {
       width: 80px;
       height: 80px;
       top: 0;
     }
+
+    &::after {
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: v.$color-gray-50;
+      position: absolute;
+      top: -40px;
+      z-index: -1;
+      counter-increment: item;
+      content: counter(item);
+      width: 136px;
+      right: 75px;
+    }
   }
 
   @include m.breakpoint(large) {
     padding-right: 0;
+
+    &::after {
+      right: 0;
+    }
   }
 }

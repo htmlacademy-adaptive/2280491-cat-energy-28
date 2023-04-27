@@ -2,29 +2,33 @@
 @use "mixins" as m;
 
 .address-map {
-  background-color: v.$color-gray-50;
-}
-
-.address-map__address {
-  display: flex;
-
-  @include m.breakpoint(large) {
-    position: absolute;
-    background-color: v.$white-color;
-  }
-}
-
-.address-map__map-wrapper {
-  height: 362px;
-  width: 100%;
-  overflow: hidden;
-
-  @include m.breakpoint(large) {
-    position: relative;
-  }
+  position: relative;
+  z-index: 0;
+  background-color: v.$white-color;
 }
 
 .address-map__image {
   width: 100%;
   height: auto;
+  display: block;
+}
+
+.address-map__map {
+  border: none;
+  height: 362px;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  margin-bottom: -6px;
+
+  @include m.breakpoint(medium) {
+    height: 400px;
+  }
+
+  @include m.breakpoint(large) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
 }

@@ -11,6 +11,10 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include m.breakpoint(medium) {
+    margin-right: 42px;
+  }
 }
 
 .result-data__parameter {
@@ -28,6 +32,12 @@
     font-size: v.$font-size-3xs;
     line-height: v.$line-height-3xs;
     background-color: v.$white-color;
+    width: auto;
+    padding: 0 10px;
+  }
+
+  @include m.breakpoint(large) {
+    background-color: v.$color-gray-50;
   }
 }
 

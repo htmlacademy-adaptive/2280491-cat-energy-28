@@ -1,10 +1,6 @@
 @use "mixins" as m;
 @use "variables" as v;
 
-.main-nav {
-  background-color: v.$white-color;
-}
-
 .main-nav__list {
   list-style: none;
   padding: 0;
@@ -47,5 +43,11 @@
     padding: 0;
     border-top: none;
     text-align: start;
+  }
+
+  @include m.breakpoint(large) {
+    &--light {
+      color: v.$white-color;
+    }
   }
 }

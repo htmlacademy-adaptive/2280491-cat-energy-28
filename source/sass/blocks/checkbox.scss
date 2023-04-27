@@ -7,6 +7,10 @@
   font-size: v.$font-size-2xs;
   line-height: v.$line-height-xs;
   text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 
   @include m.breakpoint(medium) {
     font-family: v.$primary-font;
@@ -15,5 +19,36 @@
     line-height: v.$line-height-xl;
     text-transform: uppercase;
     color: v.$color-gray-400;
+  }
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__text::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid v.$color-gray-200;
+  top: 0;
+  left: 0;
+  margin-right: 15px;
+
+  @include m.breakpoint(medium) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.checkbox__input:checked + .checkbox__text::before {
+  background-image: url("../img/small-tick.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 14px;
+  background-position: center;
+
+  @include m.breakpoint(medium) {
+    background-image: url("../img/big-tick.svg");
+    background-size: 26px 26px;
   }
 }
