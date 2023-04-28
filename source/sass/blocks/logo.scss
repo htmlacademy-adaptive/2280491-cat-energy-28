@@ -1,15 +1,30 @@
+@use "mixins" as m;
+
 .logo {
   text-decoration: none;
   display: grid;
   grid-template-columns: 34px 1fr;
   justify-items: center;
   align-items: center;
+
+  @include m.breakpoint(medium) {
+    grid-template-columns: 70px 1fr;
+  }
 }
 
 .logo__icon {
   grid-column: 1/2;
+
+  @include m.breakpoint(medium) {
+    width: 70px;
+    height: 50px;
+  }
 }
 
 .logo__text {
   grid-column: 2/3;
+
+  @include m.breakpoint(medium) {
+    margin-left: 12px;
+  }
 }
