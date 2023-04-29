@@ -29,18 +29,23 @@
   flex-direction: column;
   align-items: center;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
     left: calc(50% - 50vw);
     width: 100vw;
     height: 302px;
-    background: url("../img/bg-cat-hero.png");
+    background-image: url("../img/bg-cat-hero.jpg");
+    background-size: 320px;
     background-repeat: no-repeat;
     z-index: -2;
     background-position: center;
     background-color: #444348;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-cat-hero@2x.jpg")
+    }
   }
 
   @include m.breakpoint(medium) {
@@ -48,7 +53,7 @@
     padding-left: 88px;
     padding-bottom: 526px;
 
-    &::after {
+    &::before {
       display: none;
     }
   }
