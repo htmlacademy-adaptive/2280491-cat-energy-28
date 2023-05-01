@@ -9,6 +9,25 @@
   background-repeat: no-repeat;
   background-size: 30px 30px;
   background-position: top 25px left 125px;
+  margin-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border: 1px solid v.$color-gray-100;
+    top: 0;
+    left: calc(50% - 50vw);
+    width: 100vw;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 1px solid v.$color-gray-100;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    width: 100vw;
+  }
 
   @include m.breakpoint(medium) {
     padding: 38px;
@@ -19,6 +38,15 @@
     border: 2px solid v.$color-gray-50;
     background-size: 60px 60px;
     background-position: top 52px left 132px;
+    margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   @include m.breakpoint(large) {

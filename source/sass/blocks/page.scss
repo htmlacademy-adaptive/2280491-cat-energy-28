@@ -28,12 +28,18 @@
       height: 694px;
       background-image:
         linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        url("../img/cat-large.png");
+        url("../img/bg-cat-desktop.jpg");
       background-repeat: no-repeat;
       background-size: 1043px 696px;
       background-color: v.$brand-color-500;
       opacity: 85%;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/bg-cat-desktop@2x.jpg");
+      }
     }
   }
 }

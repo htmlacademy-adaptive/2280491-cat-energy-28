@@ -7,6 +7,16 @@
   align-content: center;
   padding: 20px 0 25px;
   height: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border: 1px solid v.$color-gray-100;
+    top: 0;
+    left: calc(50% - 50vw);
+    width: 100vw;
+  }
 
   @include m.breakpoint(medium) {
     grid-template-columns: 1fr;
@@ -14,6 +24,14 @@
     border-top: none;
     position: relative;
     background-image: linear-gradient(v.$white-color 80px, v.$color-gray-50 80px);
+
+    &::before {
+      display: none;
+    }
+
+    @include m.breakpoint(large) {
+      padding: 0 35px 40px 30px;
+    }
   }
 }
 
@@ -56,13 +74,16 @@
     font-size: v.$font-size-s;
     line-height: v.$line-height-m;
     margin-top: 34px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   @include m.breakpoint(large) {
     line-height: v.$line-height-s;
     margin-top: 46px;
-    margin-bottom: 22px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
 

@@ -29,25 +29,31 @@
   flex-direction: column;
   align-items: center;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
     left: calc(50% - 50vw);
     width: 100vw;
     height: 302px;
-    background: url("../img/bg-cat-hero.png");
+    background-image: url("../img/bg-cat-hero.jpg");
+    background-size: 320px;
     background-repeat: no-repeat;
     z-index: -2;
     background-position: center;
     background-color: #444348;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-cat-hero@2x.jpg");
+    }
   }
 
   @include m.breakpoint(medium) {
     align-items: start;
     padding-left: 88px;
+    padding-bottom: 526px;
 
-    &::after {
+    &::before {
       display: none;
     }
   }
@@ -66,13 +72,13 @@
 
   @include m.breakpoint(medium) {
     color: v.$black-color;
+    width: 420px;
     margin-top: 62px;
     text-align: start;
   }
 
   @include m.breakpoint(large) {
     margin-top: 115px;
-    width: 420px;
   }
 }
 
@@ -97,22 +103,23 @@
 
 .hero__image {
   display: block;
+  width: 100%;
   margin-top: 29px;
 
   @include m.breakpoint(medium) {
-    width: 100%;
+    position: absolute;
     height: auto;
-    order: 3;
-    margin-top: -75px;
+    margin-top: 0;
     z-index: -1;
+    bottom: 0;
+    left: 0;
   }
 
   @include m.breakpoint(large) {
-    position: absolute;
-    margin-top: 0;
     height: 500px;
     width: auto;
     top: 32px;
+    bottom: auto;
     left: 448px;
   }
 }
