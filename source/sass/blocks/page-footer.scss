@@ -21,7 +21,8 @@
 
 .page-footer__logo {
   text-align: center;
-  display: block;
+  display: flex;
+  justify-content: center;
   padding: 20px 0;
   border-bottom: 1px solid #d9d9d9;
 
@@ -52,12 +53,22 @@
   line-height: v.$line-height-xs;
   text-decoration: none;
   color: v.$color-gray-400;
-  background-image: url("../img/academy-logo.svg");
+  mask: url("../img/sprite.svg#academy-logo");
+  background-color: v.$color-gray-300;
   background-repeat: no-repeat;
   background-position: center right;
   width: 100%;
   padding: 20px 0;
   display: block;
+
+  &:hover
+  &:focus {
+    background-color: v.$brand-color-400;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include m.breakpoint(medium) {
     width: auto;

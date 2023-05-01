@@ -15,16 +15,26 @@
   display: flex;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: v.$color-gray-300;
+
+  &:hover,
+  &:focus {
+    background-color: v.$brand-color-400;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--vkontakte {
-    background-image: url("../img/socials/vkontakte.svg");
+    mask: url("../img/sprite.svg#vkontakte");
   }
 
   &--youtube {
-    background-image: url("../img/socials/youtube.svg");
+    mask: url("../img/sprite.svg#youtube");
   }
 
   &--telegram {
-    background-image: url("../img/socials/telegram.svg");
+    mask: url("../img/sprite.svg#telegram");
   }
 }

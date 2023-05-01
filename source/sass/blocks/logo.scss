@@ -7,6 +7,15 @@
   justify-items: center;
   align-items: center;
 
+  &:hover,
+  &:focus {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
   @include m.breakpoint(medium) {
     grid-template-columns: 70px 1fr;
   }
@@ -22,9 +31,24 @@
 }
 
 .logo__text {
-  grid-column: 2/3;
-
-  @include m.breakpoint(medium) {
-    margin-left: 12px;
+  &--header {
+    grid-column: 2/3;
   }
+
+  &--footer {
+    &:hover,
+    &:focus {
+      opacity: 80%;
+    }
+
+    &:active {
+      opacity: 60%;
+    }
+
+    @include m.breakpoint(medium) {
+      width: 142px;
+      height: 26px;
+    }
+  }
+
 }
