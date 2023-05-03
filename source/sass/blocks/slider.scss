@@ -31,6 +31,34 @@
   }
 }
 
+.slider:hover::before {
+  background-color: v.$brand-color-400;
+}
+
+.slider:hover {
+  .slider__button {
+    border-color: v.$brand-color-400;
+
+    &::after {
+      background-color: v.$brand-color-400;
+    }
+  }
+}
+
+.slider:active {
+  .slider__button {
+    border-color: v.$brand-color-500;
+
+    &::after {
+      background-color: v.$brand-color-500;
+    }
+  }
+}
+
+.slider:active::before {
+  background-color: v.$brand-color-500;
+}
+
 .slider__button {
   position: absolute;
   width: 40px;
@@ -40,10 +68,16 @@
   background-color: v.$white-color;
   top: calc(50% - 20px);
   left: calc(50% - 20px);
-  background-image: url("../img/arrows-slider.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    mask: url("../img/sprite.svg#arrows-slider");
+    background-color: v.$color-gray-300;
+    width: 24px;
+    height: 18px;
+  }
 }
 
 .slider__image {

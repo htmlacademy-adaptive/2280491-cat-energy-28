@@ -53,16 +53,26 @@
   line-height: v.$line-height-xs;
   text-decoration: none;
   color: v.$color-gray-400;
-  mask: url("../img/sprite.svg#academy-logo");
-  background-color: v.$color-gray-300;
-  background-repeat: no-repeat;
-  background-position: center right;
+
   width: 100%;
   padding: 20px 0;
   display: block;
+  position: relative;
 
-  &:hover
-  &:focus {
+  &::after {
+    content: "";
+    position: absolute;
+    mask: url("../img/sprite.svg#academy-logo");
+    background-color: v.$color-gray-300;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 34px;
+    right: 0;
+    top: 0;
+  }
+
+  &:hover::after,
+  &:focus::after {
     background-color: v.$brand-color-400;
   }
 

@@ -29,6 +29,8 @@
 }
 
 .form-group__list {
+  padding-left: 0;
+
   @include m.breakpoint(large) {
     clear: both;
     display: grid;
