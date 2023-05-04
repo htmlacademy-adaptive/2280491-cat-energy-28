@@ -7,6 +7,15 @@
   justify-items: center;
   align-items: center;
 
+  &:hover,
+  &:focus {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
   @include m.breakpoint(medium) {
     grid-template-columns: 70px 1fr;
   }
@@ -16,15 +25,37 @@
   grid-column: 1/2;
 
   @include m.breakpoint(medium) {
-    width: 70px;
+    width: 60px;
     height: 50px;
+  }
+
+  @include m.breakpoint(large) {
+    width: 70px;
+    height: 60px;
   }
 }
 
 .logo__text {
-  grid-column: 2/3;
+  &--header {
+    grid-column: 2/3;
+  }
 
-  @include m.breakpoint(medium) {
-    margin-left: 12px;
+  &--footer {
+    &:hover {
+      opacity: 80%;
+    }
+
+    &:active {
+      opacity: 60%;
+    }
+
+    &:focus {
+      opacity: 80%;
+    }
+
+    @include m.breakpoint(medium) {
+      width: 142px;
+      height: 26px;
+    }
   }
 }

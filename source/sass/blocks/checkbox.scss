@@ -22,10 +22,6 @@
   }
 }
 
-.checkbox__input {
-  display: none;
-}
-
 .checkbox__text::before {
   content: "";
   width: 30px;
@@ -41,6 +37,14 @@
   }
 }
 
+.checkbox__text:hover::before {
+  border: 1px solid #bababa;
+}
+
+.checkbox__input:disabled + .checkbox__text {
+  opacity: 0.3;
+}
+
 .checkbox__input:checked + .checkbox__text::before {
   background-image: url("../img/small-tick.svg");
   background-repeat: no-repeat;
@@ -51,4 +55,8 @@
     background-image: url("../img/big-tick.svg");
     background-size: 26px 26px;
   }
+}
+
+.checkbox:focus-within .checkbox__text::before {
+  border-color: v.$color-gray-400;
 }

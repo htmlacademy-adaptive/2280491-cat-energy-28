@@ -5,6 +5,15 @@
   display: flex;
   align-items: center;
   clear: both;
+  position: relative;
+
+  &--contacts {
+    flex-direction: row-reverse;
+
+    @include m.breakpoint(large) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .form-field__label {
@@ -17,6 +26,31 @@
   margin-right: 13px;
   white-space: nowrap;
 
+  &--icon {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 13px;
+      right: 15px;
+      background-color: v.$black-color;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--icon-mail {
+    &::after {
+      mask: url("../img/sprite.svg#mail");
+    }
+  }
+
+  &--icon-phone {
+    &::after {
+      mask: url("../img/sprite.svg#phone");
+    }
+  }
+
   @include m.breakpoint(medium) {
     font-family: v.$primary-font;
     font-weight: 400;
@@ -24,6 +58,11 @@
     line-height: v.$line-height-xl;
     text-transform: uppercase;
     color: v.$color-gray-400;
+
+    &::after {
+      top: 20px;
+      right: 18px;
+    }
   }
 }
 
@@ -36,7 +75,51 @@
   text-transform: uppercase;
   width: 100%;
   padding: 14px 15px 13px 20px;
-  border: 1px solid v.$color-gray-200;
+  border: 1px solid #e7e7e7;
+  -moz-appearance: textfield; /* stylelint-disable-line */
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &--error {
+    outline-offset: -2px;
+    outline: 2px solid #ff8282;
+  }
+
+  &--error + .form-field__label-contacts {
+    &::after {
+      background-color: #ff8282;
+    }
+  }
+
+  &:hover {
+    outline: 1px solid v.$color-gray-200;
+  }
+
+  &:focus {
+    outline-offset: -2px;
+    outline: 2px solid v.$color-gray-400;
+  }
+
+  &:focus + .form-field__label--icon {
+    &::after {
+      background-color: v.$brand-color-400;
+    }
+  }
+
+  &:user-invalid {
+    outline-offset: -2px;
+    outline: 2px solid #ff8282;
+  }
+
+  &:user-invalid + .form-field__label--icon {
+    &::after {
+      background-color: #ff8282;
+    }
+  }
 
   &::placeholder {
     color: v.$color-gray-400;
@@ -45,20 +128,6 @@
 
   &--contacts {
     padding-left: 15px;
-  }
-
-  &--owner-mail::placeholder {
-    background-image: url("../img/mail.svg");
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: right;
-  }
-
-  &--owner-phone::placeholder {
-    background-image: url("../img/phone.svg");
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: right;
   }
 
   &--comment {

@@ -11,9 +11,9 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body page__body--main">
+
     <header class="page__header page-header">
       <div class="page-header__wrapper">
-
         <a class="page-header__logo logo" href="#">
           <picture>
             <source media="(min-width: 1270px)"
@@ -23,7 +23,7 @@
             <img class="logo__icon" alt="Cat energy" aria-hidden="true"
               src="img/logo/logo-mobile.svg" width="33" height="37">
           </picture>
-          <img class="logo__text" src="img/logo-title.svg" width="101" height="18" alt="Cat energy">
+          <img class="logo__text logo__text--header" src="img/logo-title.svg" width="101" height="18" alt="Cat energy">
         </a>
 
         <button class="page-header__toggle" type="button">
@@ -33,7 +33,7 @@
         <nav class="page-header__main-nav main-nav">
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--current">
+              <li class="main-nav__item main-nav__item--current main-nav__item--current-index">
                 <a class="main-nav__link main-nav__link--light" href="index.html">Главная</a>
               </li>
               <li class="main-nav__item">
@@ -151,9 +151,6 @@
             </div>
 
             <figure class="example__slider slider">
-              <button class="slider__button" type="button">
-                <span class="visually-hidden">Перетащить.</span>
-              </button>
               <picture>
                 <source media="(min-width: 758px)"
                   srcset="img/slider/cat-before-tablet.png 1x,
@@ -172,6 +169,10 @@
                   srcset="img/slider/cat-after-mobile@2x.png 2x">
               </picture>
               <figcaption class="visually-hidden">Пример</figcaption>
+
+              <button class="slider__button" type="button">
+                <span class="visually-hidden">Перетащить.</span>
+              </button>
             </figure>
           </div>
         </div>
@@ -202,7 +203,7 @@
       <div class="page-footer__wrapper wrapper">
 
         <a class="page-footer__logo logo" href="index.html">
-          <img class="logo__text" src="img/logo-title.svg" width="128" height="24" alt="Cat energy">
+          <img class="logo__text logo__text--footer" src="img/logo-title.svg" width="128" height="24" alt="Cat energy">
         </a>
 
         <ul class="page-footer__social-list social-list">

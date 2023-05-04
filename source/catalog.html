@@ -24,7 +24,7 @@
             <img class="logo__icon" alt="Cat energy" aria-hidden="true"
               src="img/logo/logo-mobile.svg" width="33" height="37">
           </picture>
-          <img class="logo__text" src="img/logo-title.svg" width="101" height="18" alt="Cat energy">
+          <img class="logo__text logo__text--header" src="img/logo-title.svg" width="101" height="18" alt="Cat energy">
         </a>
 
         <button class="page-header__toggle" type="button">
@@ -34,10 +34,10 @@
         <nav class="page-header__main-nav main-nav">
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--current">
+              <li class="main-nav__item">
                 <a class="main-nav__link" href="index.html">Главная</a>
               </li>
-              <li class="main-nav__item">
+              <li class="main-nav__item main-nav__item--current">
                 <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
               </li>
               <li class="main-nav__item">
@@ -57,6 +57,15 @@
           <li class="product-card">
             <a class="product-card__link-image" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1270px)"
+                  srcset="img/products/product-1-desktop.webp 1x,
+                  img/products/product-1-desktop@2x.webp 2x" width="172" height="196">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/products/product-1-tablet.webp 1x,
+                  img/products/product-1-tablet@2x.webp 2x" width="168" height="200">
+                <source type="image/webp"
+                  srcset="img/products/product-1-mobile.webp 1x,
+                  img/products/product-1-mobile@2x.webp 2x" width="140" height="112">
                 <source media="(min-width: 1270px)"
                   srcset="img/products/product-1-desktop.png 1x,
                   img/products/product-1-desktop@2x.png 2x" width="172" height="196">
@@ -323,7 +332,7 @@
           <li class="show-more-card">
             <strong class="show-more-card__title">Показать еще 100500 товаров</strong>
             <p class="show-more-card__text">На самом деле вкусов гораздо больше!</p>
-            <button class="show-more-card__button button button--catalog" type="button">Показать все</button>
+            <button class="show-more-card__button button button--catalog button--show-more" type="button">Показать все</button>
           </li>
         </ul>
 
@@ -412,7 +421,7 @@
       <div class="page-footer__wrapper wrapper">
 
         <a class="page-footer__logo logo" href="index.html">
-          <img class="logo__text" src="img/logo-title.svg" width="128" height="24" alt="Cat energy">
+          <img class="logo__text logo__text--footer" src="img/logo-title.svg" width="128" height="24" alt="Cat energy">
         </a>
 
         <ul class="page-footer__social-list social-list">

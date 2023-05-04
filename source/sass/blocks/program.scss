@@ -180,13 +180,37 @@
   text-decoration: none;
   color: v.$black-color;
   position: relative;
-  background-image: url("../img/arrow-program.svg");
-  background-repeat: no-repeat;
-  background-position: center right;
-  padding: 4px 39px 4px 0;
+  padding: 4px 47px 4px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    mask: url("../img/sprite.svg#arrow-short-program");
+    background-color: v.$black-color;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 12px;
+    top: 10px;
+    right: 0;
+  }
+
+  &:hover {
+    &::after {
+      mask: url("../img/sprite.svg#arrow-long-program");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-xl;
+    padding: 4px 57px 4px 0;
+
+    &::after {
+      top: 14px;
+    }
   }
 }

@@ -1,6 +1,10 @@
 @use "mixins" as m;
 @use "variables" as v;
 
+.main-nav__wrapper {
+  margin-top: 18px;
+}
+
 .main-nav__list {
   list-style: none;
   padding: 0;
@@ -21,6 +25,20 @@
   }
 }
 
+.main-nav__item--current {
+  @include m.breakpoint(medium) {
+    padding-bottom: 12px;
+    border-bottom: 2px solid v.$brand-color-400;
+  }
+}
+
+.main-nav__item--current-index {
+  @include m.breakpoint(large) {
+    padding-bottom: 12px;
+    border-bottom: 2px solid v.$white-color;
+  }
+}
+
 .main-nav__link {
   font-family: v.$primary-font;
   font-weight: 500;
@@ -34,6 +52,14 @@
   padding-bottom: 24px;
   border-top: 1px solid #e6e6e6;
   text-align: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include m.breakpoint(medium) {
     font-weight: 400;
