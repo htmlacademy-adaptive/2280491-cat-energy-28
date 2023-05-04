@@ -22,10 +22,6 @@
   }
 }
 
-.checkbox__input {
-  display: none;
-}
-
 .checkbox__text::before {
   content: "";
   width: 30px;
@@ -59,4 +55,8 @@
     background-image: url("../img/big-tick.svg");
     background-size: 26px 26px;
   }
+}
+
+.checkbox:focus-within .checkbox__text::before {
+  border-color: v.$color-gray-400;
 }

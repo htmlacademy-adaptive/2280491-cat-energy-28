@@ -27,7 +27,7 @@
 
   @include m.breakpoint(medium) {
     padding-top: 43px;
-    padding-bottom: 0;
+    padding-bottom: 100px;
   }
 
   @include m.breakpoint(large) {
@@ -141,4 +141,12 @@
 
 .example__slider {
   margin: 0;
+
+  @include m.breakpoint(medium) {
+    margin: 0 75px 0 75px;
+  }
+
+  @include m.breakpoint(large) {
+    margin: 0;
+  }
 }

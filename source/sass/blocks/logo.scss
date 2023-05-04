@@ -41,13 +41,16 @@
   }
 
   &--footer {
-    &:hover,
-    &:focus {
+    &:hover {
       opacity: 80%;
     }
 
     &:active {
       opacity: 60%;
+    }
+
+    &:focus {
+      opacity: 80%;
     }
 
     @include m.breakpoint(medium) {

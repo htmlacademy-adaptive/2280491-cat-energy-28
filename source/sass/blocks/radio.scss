@@ -1,10 +1,6 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-.radio__input {
-  display: none;
-}
-
 .radio__text {
   font-family: v.$primary-font;
   font-weight: 400;
@@ -67,4 +63,8 @@
     top: 11px;
     left: 11px;
   }
+}
+
+.radio:focus-within .radio__text::before {
+  border-color: v.$color-gray-400;
 }

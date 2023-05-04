@@ -26,25 +26,29 @@
   margin-right: 13px;
   white-space: nowrap;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 13px;
-    right: 15px;
+  &--icon {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 13px;
+      right: 15px;
+      background-color: v.$black-color;
+      background-repeat: no-repeat;
+    }
   }
 
-  &--owner-mail::after {
-    mask: url("../img/sprite.svg#mail");
-    background-color: v.$black-color;
-    background-repeat: no-repeat;
+  &--icon-mail {
+    &::after {
+      mask: url("../img/sprite.svg#mail");
+    }
   }
 
-  &--owner-phone::after {
-    mask: url("../img/sprite.svg#phone");
-    background-color: v.$black-color;
-    background-repeat: no-repeat;
+  &--icon-phone {
+    &::after {
+      mask: url("../img/sprite.svg#phone");
+    }
   }
 
   @include m.breakpoint(medium) {
@@ -72,6 +76,7 @@
   width: 100%;
   padding: 14px 15px 13px 20px;
   border: 1px solid #e7e7e7;
+  -moz-appearance: textfield; /* stylelint-disable-line */
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -79,26 +84,38 @@
     margin: 0;
   }
 
+  &--error {
+    outline-offset: -2px;
+    outline: 2px solid #ff8282;
+  }
+
+  &--error + .form-field__label-contacts {
+    &::after {
+      background-color: #ff8282;
+    }
+  }
+
   &:hover {
-    border: 1px solid v.$color-gray-200;
+    outline: 1px solid v.$color-gray-200;
   }
 
   &:focus {
-    border: none;
+    outline-offset: -2px;
     outline: 2px solid v.$color-gray-400;
   }
 
-  &:focus + .form-field__label {
+  &:focus + .form-field__label--icon {
     &::after {
       background-color: v.$brand-color-400;
     }
   }
 
-  &:focus:invalid {
+  &:user-invalid {
+    outline-offset: -2px;
     outline: 2px solid #ff8282;
   }
 
-  &:focus:invalid + .form-field__label {
+  &:user-invalid + .form-field__label--icon {
     &::after {
       background-color: #ff8282;
     }
