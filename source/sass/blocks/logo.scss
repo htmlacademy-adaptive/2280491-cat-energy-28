@@ -7,13 +7,12 @@
   justify-items: center;
   align-items: center;
 
-  &:hover,
-  &:focus {
-    opacity: 80%;
+  &:hover {
+    opacity: 0.8;
   }
 
   &:active {
-    opacity: 60%;
+    opacity: 0.6;
   }
 
   @include m.breakpoint(medium) {
@@ -38,24 +37,13 @@
 .logo__text {
   &--header {
     grid-column: 2/3;
-  }
-
-  &--footer {
-    &:hover {
-      opacity: 80%;
-    }
-
-    &:active {
-      opacity: 60%;
-    }
-
-    &:focus {
-      opacity: 80%;
-    }
 
     @include m.breakpoint(medium) {
-      width: 142px;
-      height: 26px;
+      margin-left: 12px;
+    }
+
+    @include m.breakpoint(large) {
+      margin-left: 14px;
     }
   }
 }
