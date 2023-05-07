@@ -59,19 +59,19 @@
   }
 
   &--healthy::before {
-    background-image: url("../img/about/healthy-about.svg");
+    background-image: url("../img/sprite.svg#healthy-about");
   }
 
   &--powder::before {
-    background-image: url("../img/about/powder-about.svg");
+    background-image: url("../img/sprite.svg#powder-about");
   }
 
   &--food::before {
-    background-image: url("../img/about/food-about.svg");
+    background-image: url("../img/sprite.svg#food-about");
   }
 
   &--time::before {
-    background-image: url("../img/about/time-about.svg");
+    background-image: url("../img/sprite.svg#time-about");
   }
 
   @include m.breakpoint(medium) {
