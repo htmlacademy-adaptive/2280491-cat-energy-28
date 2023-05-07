@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
+import { deleteAsync } from 'del';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
@@ -13,7 +14,7 @@ import svgstore from 'gulp-svgstore';
 
 // Styles
 
-const styles = () => {
+export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
@@ -50,7 +51,7 @@ const optimizeImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-export const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
 }
@@ -65,14 +66,14 @@ const createWebp = () => {
 }
 
 // SVG
-export const svg = () => {
+const svg = () => {
   return gulp.src('source/img/**/*.{svg}')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'))
 }
 
 // Sprite
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/icons/*.{svg}')
     .pipe(svgo())
     .pipe(svgstore({
@@ -80,6 +81,30 @@ export const sprite = () => {
     }))
     .pipe(rename('inline-sprite.svg'))
     .pipe(gulp.dest('build/img'));
+}
+
+// Copy
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/**/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest'
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
+}
+
+// Clean
+const clean = () => {
+  return deleteAsync('build');
+}
+
+// Reload
+const reload = (done) => {
+  browser.reload();
+  done();
 }
 
 // Server
@@ -100,10 +125,37 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
+// Build
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    svg,
+    sprite,
+    createWebp
+  )
+);
 
+// Default
 export default gulp.series(
-  html, styles, server, watcher
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    svg,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
 );
