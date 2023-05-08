@@ -60,18 +60,22 @@
 
   &--healthy::before {
     background-image: url("../img/sprite.svg#healthy-about");
+    background-size: 30px 32px;
   }
 
   &--powder::before {
     background-image: url("../img/sprite.svg#powder-about");
+    background-size: 26px 29px;
   }
 
   &--food::before {
     background-image: url("../img/sprite.svg#food-about");
+    background-size: 25px 30px;
   }
 
   &--time::before {
     background-image: url("../img/sprite.svg#time-about");
+    background-size: 26px 31px;
   }
 
   @include m.breakpoint(medium) {
