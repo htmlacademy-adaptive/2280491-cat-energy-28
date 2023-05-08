@@ -26,15 +26,10 @@
 .page-header__logo {
   grid-column: 1/3;
   grid-row: 1;
-  padding-bottom: 17px;
-
-  @include m.breakpoint(medium) {
-    padding-bottom: 0;
-  }
 }
 
 .page-header__toggle {
-  background-image: url("../img/hamburger-menu.svg");
+  background-image: url("../img/sprite.svg#hamburger-menu");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -45,7 +40,6 @@
   cursor: pointer;
   grid-column: 3/4;
   grid-row: 1;
-  margin-bottom: 17px;
 
   @include m.breakpoint(medium) {
     display: none;

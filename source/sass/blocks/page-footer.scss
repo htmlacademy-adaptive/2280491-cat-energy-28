@@ -6,7 +6,7 @@
 }
 
 .page-footer__wrapper {
-  padding: 20px 0;
+  padding: 20px 28px;
 
   @include m.breakpoint(medium) {
     display: flex;
@@ -55,7 +55,7 @@
   color: v.$color-gray-400;
 
   width: 100%;
-  padding: 20px 0;
+  padding: 28px 0;
   display: block;
   position: relative;
 
@@ -68,7 +68,7 @@
     width: 27px;
     height: 34px;
     right: 0;
-    top: 0;
+    top: 20px;
   }
 
   &:hover::after,

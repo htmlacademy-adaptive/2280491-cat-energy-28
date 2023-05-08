@@ -1,6 +1,25 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.checkbox {
+  position: relative;
+}
+
+.checkbox__input {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+
+  @include m.breakpoint(medium) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .checkbox__text {
   font-family: v.$primary-font;
   font-weight: 400;
@@ -46,13 +65,12 @@
 }
 
 .checkbox__input:checked + .checkbox__text::before {
-  background-image: url("../img/small-tick.svg");
+  background-image: url("../img/sprite.svg#small-tick");
   background-repeat: no-repeat;
-  background-size: 18px 14px;
+  background-size: 19px 15px;
   background-position: center;
 
   @include m.breakpoint(medium) {
-    background-image: url("../img/big-tick.svg");
     background-size: 26px 26px;
   }
 }
