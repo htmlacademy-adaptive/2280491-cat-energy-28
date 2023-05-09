@@ -10,7 +10,7 @@
   display: block;
   text-align: center;
   cursor: pointer;
-  padding: 7px 0;
+  padding: 10px 0;
 
   @include m.breakpoint(medium) {
     padding: 14px 0;

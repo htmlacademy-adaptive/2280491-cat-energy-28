@@ -26,7 +26,7 @@
   text-align: center;
   margin-top: -8px;
   background-color: #eaeaea;
-  width: 87px;
+  width: 80px;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-3xs;
@@ -47,6 +47,7 @@
   font-weight: 400;
   font-size: v.$font-size-m;
   line-height: v.$line-height-m;
+  text-transform: uppercase;
   text-align: center;
   border: 1px solid #cdcdcd;
   border-radius: 3px;

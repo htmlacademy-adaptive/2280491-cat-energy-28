@@ -2,7 +2,9 @@
 @use "variables" as v;
 
 .main-nav__wrapper {
-  margin-top: 18px;
+  @include m.breakpoint(medium) {
+    margin-top: 18px;
+  }
 }
 
 .main-nav__list {
@@ -50,8 +52,8 @@
   display: block;
   padding-top: 22px;
   padding-bottom: 24px;
-  border-top: 1px solid #e6e6e6;
   text-align: center;
+  border-top: 1px solid #e6e6e6;
 
   &:hover {
     opacity: 0.6;

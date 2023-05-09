@@ -37,6 +37,7 @@
 .logo__text {
   &--header {
     grid-column: 2/3;
+    margin-left: -12px;
 
     @include m.breakpoint(medium) {
       margin-left: 12px;
