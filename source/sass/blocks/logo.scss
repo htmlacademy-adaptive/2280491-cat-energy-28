@@ -38,13 +38,24 @@
   &--header {
     grid-column: 2/3;
     margin-left: -12px;
+  }
 
-    @include m.breakpoint(medium) {
-      margin-left: 12px;
+  @include m.breakpoint(medium) {
+    &--header {
+      margin-left: 0;
     }
 
-    @include m.breakpoint(large) {
+    &--footer {
+      width: 142px;
+      height: 26px;
+    }
+  }
+
+  @include m.breakpoint(large) {
+    &--header {
       margin-left: 14px;
+      width: 117px;
+      height: 21px;
     }
   }
 }

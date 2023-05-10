@@ -11,11 +11,11 @@
   @include m.breakpoint(medium) {
     display: flex;
     justify-content: space-between;
-    padding: 55px 0;
+    padding: 57px 0;
   }
 
   @include m.breakpoint(large) {
-    padding: 66px 0;
+    padding: 75px 0;
   }
 }
 
@@ -43,6 +43,7 @@
   @include m.breakpoint(medium) {
     padding: 0;
     border-bottom: none;
+    margin-left: 27px;
   }
 }
 
@@ -83,5 +84,9 @@
   @include m.breakpoint(medium) {
     width: auto;
     padding: 9px 54px 9px 0;
+
+    &::after {
+      top: 0;
+    }
   }
 }

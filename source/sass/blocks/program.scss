@@ -25,7 +25,7 @@
   position: relative;
 
   @include m.breakpoint(medium) {
-    padding: 77px 62px 53px 52px;
+    padding: 77px 62px 60px 52px;
     margin-bottom: 30px;
 
     &:last-child {
@@ -160,14 +160,14 @@
     color: v.$black-color;
     margin-right: 254px;
     margin-top: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
     border-bottom: none;
     padding-bottom: 0;
   }
 
   @include m.breakpoint(large) {
     margin-top: 73px;
-    margin-bottom: 23px;
+    margin-bottom: 27px;
     margin-right: 0;
   }
 }

@@ -14,21 +14,23 @@
 
     <header class="page__header page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo logo" href="#">
-          <picture>
-            <source media="(min-width: 1270px)"
-              srcset="img/logo/logo-desktop.svg">
-            <source media="(min-width: 758px)"
-              srcset="img/logo/logo-tablet.svg">
-            <img class="logo__icon" alt="Cat energy" aria-hidden="true"
-              src="img/logo/logo-mobile.svg" width="33" height="37">
-          </picture>
-          <img class="logo__text logo__text--header" src="img/logo-title.svg" width="101" height="18" alt="Cat energy">
-        </a>
+        <div class="page-header__logo-btn">
+          <a class="page-header__logo logo" href="#">
+            <picture>
+              <source media="(min-width: 1270px)"
+                srcset="img/logo/logo-desktop.svg">
+              <source media="(min-width: 758px)"
+                srcset="img/logo/logo-tablet.svg">
+              <img class="logo__icon" alt="Cat energy" aria-hidden="true"
+                src="img/logo/logo-mobile.svg" width="33" height="37">
+            </picture>
+            <img class="logo__text logo__text--header" src="img/logo-title.svg" width="101" height="18" alt="Cat energy">
+          </a>
 
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
 
         <nav class="page-header__main-nav main-nav">
           <div class="main-nav__wrapper">
@@ -145,7 +147,7 @@
 
                 <span class="example__costs">
                   <span class="example__costs-text">Затраты на питание:</span>
-                  15 000 &#8381;
+                  15 000 руб.
                 </span>
               </div>
             </div>
@@ -185,7 +187,8 @@
           <div class="address__wrapper">
             <p class="address__dealers">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
             <address class="address__location">
-              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+              ул. Большая Конюшенная, д. 19/8
+              <span class="address__location-city">Санкт-Петербург</span>
             </address>
           </div>
         </div>

@@ -5,6 +5,10 @@
   @include m.breakpoint(medium) {
     margin-top: 18px;
   }
+
+  @include m.breakpoint(large) {
+    margin-top: 10px;
+  }
 }
 
 .main-nav__list {
@@ -32,11 +36,14 @@
     padding-bottom: 12px;
     border-bottom: 2px solid v.$brand-color-400;
   }
+
+  @include m.breakpoint(large) {
+    padding-bottom: 10px;
+  }
 }
 
 .main-nav__item--current-index {
   @include m.breakpoint(large) {
-    padding-bottom: 12px;
     border-bottom: 2px solid v.$white-color;
   }
 }
@@ -73,6 +80,9 @@
   }
 
   @include m.breakpoint(large) {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+
     &--light {
       color: v.$white-color;
     }
