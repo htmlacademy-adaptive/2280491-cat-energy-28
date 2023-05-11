@@ -2,11 +2,9 @@
 @use "variables" as v;
 
 .main-nav__wrapper {
-  @include m.breakpoint(medium) {
-    margin-top: 18px;
-  }
+  display: none;
 
-  @include m.breakpoint(large) {
+  @include m.breakpoint(medium) {
     margin-top: 10px;
   }
 }
@@ -23,7 +21,7 @@
 
 .main-nav__item {
   @include m.breakpoint(medium) {
-    margin-right: 35px;
+    margin-right: 37px;
 
     &:last-child {
       margin-right: 0;
@@ -33,12 +31,12 @@
 
 .main-nav__item--current {
   @include m.breakpoint(medium) {
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     border-bottom: 2px solid v.$brand-color-400;
   }
 
   @include m.breakpoint(large) {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
 }
 

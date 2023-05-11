@@ -10,7 +10,7 @@
 
 .address__wrapper {
   display: flex;
-  padding: 26px 0 26px;
+  padding: 28px 0;
 
   @include m.breakpoint(medium) {
     display: grid;
