@@ -2,7 +2,7 @@
 @use "variables" as v;
 
 .main-nav__wrapper {
-  display: none;
+  // display: none;
 
   @include m.breakpoint(medium) {
     margin-top: 10px;

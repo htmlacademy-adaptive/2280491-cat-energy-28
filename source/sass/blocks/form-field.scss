@@ -59,6 +59,10 @@
     text-transform: uppercase;
     color: v.$color-gray-400;
 
+    &--icon {
+      margin-right: 20px;
+    }
+
     &::after {
       top: 20px;
       right: 18px;
@@ -130,27 +134,30 @@
     padding-left: 15px;
   }
 
-  &--comment {
-    padding-left: 15px;
-    padding-right: 12px;
-    height: 150px;
-    margin-top: 38px;
-    margin-bottom: 23px;
-
-    @include m.breakpoint(medium) {
-      margin-top: 76px;
-      margin-bottom: 65px;
-    }
-
-    @include m.breakpoint(large) {
-      padding-left: 20px;
-      padding-top: 10px;
-      height: 174px;
-    }
-  }
-
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-xl;
+    padding: 10px 15px 10px 20px;
+  }
+}
+
+.form-field__input--comment {
+  padding-left: 15px;
+  padding-right: 12px;
+  height: 152px;
+  margin-top: 38px;
+  margin-bottom: 25px;
+  padding-top: 8px;
+
+  @include m.breakpoint(medium) {
+    height: 172px;
+    margin-top: 76px;
+    margin-bottom: 65px;
+  }
+
+  @include m.breakpoint(large) {
+    padding-left: 20px;
+    padding-top: 10px;
+    height: 174px;
   }
 }

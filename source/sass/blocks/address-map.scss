@@ -36,3 +36,27 @@
     z-index: 1;
   }
 }
+
+.address-map__map-noscript {
+  width: 100%;
+  height: 362px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  @include m.breakpoint(medium) {
+    height: 400px;
+  }
+}
+
+.address-map__img-noscript {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  object-fit: cover;
+
+  @include m.breakpoint(large) {
+    z-index: 1;
+  }
+}

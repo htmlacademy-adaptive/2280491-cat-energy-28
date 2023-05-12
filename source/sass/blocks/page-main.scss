@@ -11,6 +11,12 @@
       padding: 0 40px;
     }
   }
+
+  @include m.breakpoint(large) {
+    &--form {
+      padding: 0;
+    }
+  }
 }
 
 .page-main__title {
@@ -57,10 +63,17 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
+  margin-right: 50px;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-xl;
-    margin-bottom: 66px;
+    margin-bottom: 60px;
+    margin-right: 300px;
+  }
+
+  @include m.breakpoint(large) {
+    margin-right: 900px;
+    margin-bottom: 62px;
   }
 }

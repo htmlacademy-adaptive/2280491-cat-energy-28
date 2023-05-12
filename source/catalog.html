@@ -416,6 +416,22 @@
           allowfullscreen
           alt="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </iframe>
+
+        <noscript>
+          <div class="address-map__map-noscript">
+            <picture>
+              <source media="(min-width: 1270px)"
+                srcset="img/map/map-desktop.jpg 1x,
+                img/map/map-desktop@2x.jpg 2x" width="1440" height="400">
+              <source media="(min-width: 758px)"
+                srcset="img/map/map-tablet.jpg 1x,
+                img/map/map-tablet@2x.jpg 1x" width="768" height="400">
+              <img class="address-map__img-noscript"
+                src="img/map/map-mobile.jpg" width="320" height="362" alt="Cat Energy на карте"
+                srcset="img/map/map-mobile@2x.jpg 2x">
+            </picture>
+          </div>
+        </noscript>
       </section>
     </main>
 

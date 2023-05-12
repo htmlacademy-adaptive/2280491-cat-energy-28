@@ -31,8 +31,8 @@
   }
 
   @include m.breakpoint(large) {
-    padding-top: 40px;
-    padding-bottom: 75px;
+    padding-top: 35px;
+    padding-bottom: 80px;
   }
 }
 
@@ -65,7 +65,7 @@
   }
 
   @include m.breakpoint(large) {
-    margin-right: 138px;
+    margin-right: 130px;
     margin-bottom: 70px;
   }
 }
@@ -80,8 +80,8 @@
   }
 
   @include m.breakpoint(large) {
-    margin-bottom: 45px;
-    margin-right: 204px;
+    margin-bottom: 50px;
+    margin-right: 195px;
   }
 }
 
@@ -113,11 +113,14 @@
     font-size: v.$font-size-s;
     line-height: v.$line-height-s;
     text-align: right;
+    margin-top: 10px;
     margin-bottom: 0;
   }
 
   @include m.breakpoint(large) {
+    margin-top: 5px;
     text-align: left;
+    margin-bottom: -5px;
   }
 }
 
@@ -137,7 +140,7 @@
   @include m.breakpoint(large) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 95px;
     align-items: end;
   }
 }

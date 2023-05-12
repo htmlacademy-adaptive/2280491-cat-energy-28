@@ -10,7 +10,7 @@
   }
 
   @include m.breakpoint(large) {
-    padding: 14px 0;
+    padding: 15px 0 16px;
     grid-template-columns: 1fr 80px 1fr 80px 1fr;
     gap: 0;
     align-items: center;
@@ -25,13 +25,14 @@
   text-transform: uppercase;
   color: v.$color-gray-500;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 
   @include m.breakpoint(medium) {
     grid-column: 1;
     grid-row: 1;
     font-size: v.$font-size-s;
     line-height: v.$line-height-s;
+    margin-bottom: 25px;
   }
 
   @include m.breakpoint(large) {
@@ -43,7 +44,7 @@
 
 .extra-product-card__table {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   margin: 0;
   margin-bottom: 14px;
 
@@ -79,6 +80,7 @@
 
 .extra-product-card__button {
   font-size: v.$font-size-2xs;
+  line-height: v.$line-height-s;
   width: 100%;
 
   @include m.breakpoint(medium) {

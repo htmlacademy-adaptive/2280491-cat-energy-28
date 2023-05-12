@@ -78,7 +78,7 @@
   }
 
   @include m.breakpoint(large) {
-    margin-top: 110px;
+    margin-top: 105px;
   }
 }
 
@@ -98,6 +98,10 @@
     color: v.$black-color;
     margin-top: 41px;
     margin-bottom: 44px;
+  }
+
+  @include m.breakpoint(large) {
+    margin-bottom: 48px;
   }
 }
 
