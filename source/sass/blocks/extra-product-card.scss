@@ -26,6 +26,7 @@
   color: v.$color-gray-500;
   margin: 0;
   margin-bottom: 14px;
+  word-break: break-all;
 
   @include m.breakpoint(medium) {
     grid-column: 1;
@@ -71,10 +72,13 @@
   line-height: v.$line-height-3xs;
   color: v.$color-gray-400;
   margin: 0;
+  max-width: 120px;
+  word-wrap: break-word;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-2xs;
     line-height: v.$line-height-s;
+    max-width: none;
   }
 }
 
@@ -82,6 +86,7 @@
   font-size: v.$font-size-2xs;
   line-height: v.$line-height-s;
   width: 100%;
+  word-break: break-all;
 
   @include m.breakpoint(medium) {
     grid-column: 1/3;

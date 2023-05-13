@@ -34,13 +34,18 @@
 
 .main-nav__item {
   border-top: 1px solid #e6e6e6;
+  width: 100vw;
   display: flex;
   justify-content: center;
+  min-width: 280px;
 
   @include m.breakpoint(medium) {
     display: block;
     margin-right: 37px;
     border-top: none;
+    min-width: auto;
+    width: auto;
+    max-width: 443px;
 
     &:last-child {
       margin-right: 0;
