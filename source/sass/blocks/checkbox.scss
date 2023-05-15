@@ -30,6 +30,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  word-break: break-all;
 
   @include m.breakpoint(medium) {
     font-family: v.$primary-font;
@@ -49,11 +50,13 @@
   top: 0;
   left: 0;
   margin-right: 15px;
+  min-width: 30px;
 
   @include m.breakpoint(medium) {
     width: 40px;
     height: 40px;
     margin-right: 20px;
+    min-width: 40px;
   }
 }
 

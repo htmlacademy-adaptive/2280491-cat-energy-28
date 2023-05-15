@@ -24,7 +24,27 @@
   color: v.$color-gray-400;
   text-transform: uppercase;
   margin-right: 13px;
-  white-space: nowrap;
+  word-break: break-all;
+
+  &--name {
+    width: 40px;
+  }
+
+  &--wight {
+    width: 60px;
+  }
+
+  &--age {
+    width: 100px;
+  }
+
+  &--email {
+    width: 50px;
+  }
+
+  &--phone {
+    width: 67px;
+  }
 
   &--icon {
     &::after {
@@ -32,10 +52,11 @@
       position: absolute;
       width: 20px;
       height: 20px;
-      top: 13px;
+      top: 50%;
       right: 15px;
       background-color: v.$black-color;
       background-repeat: no-repeat;
+      transform: translateY(-50%);
     }
   }
 
@@ -59,12 +80,31 @@
     text-transform: uppercase;
     color: v.$color-gray-400;
 
+    &--name {
+      width: 47px;
+    }
+
+    &--wight {
+      width: 75px;
+    }
+
+    &--age {
+      width: 124px;
+    }
+
+    &--email {
+      width: 63px;
+    }
+
+    &--phone {
+      width: 85px;
+    }
+
     &--icon {
       margin-right: 20px;
     }
 
     &::after {
-      top: 20px;
       right: 18px;
     }
   }
@@ -80,6 +120,7 @@
   width: 100%;
   padding: 14px 15px 13px 20px;
   border: 1px solid #e7e7e7;
+  flex: 1;
   -moz-appearance: textfield; /* stylelint-disable-line */
 
   &::-webkit-outer-spin-button,
