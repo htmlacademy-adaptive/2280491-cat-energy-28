@@ -12,5 +12,6 @@
   @include m.breakpoint(medium) {
     font-size: v.$font-size-2xl;
     line-height: v.$line-height-4xl;
+    max-width: 700px;
   }
 }

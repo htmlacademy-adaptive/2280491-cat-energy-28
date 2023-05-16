@@ -5,13 +5,14 @@
   position: relative;
 
   @include m.breakpoint(medium) {
-    padding-bottom: 86px;
+    padding-bottom: 78px;
   }
 
   @include m.breakpoint(large) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 80px;
+    padding-bottom: 85px;
   }
 }
 
@@ -21,10 +22,10 @@
   font-size: v.$font-size-m;
   line-height: v.$line-height-2xl;
   margin: 0;
-  margin-bottom: 36px;
   background-color: v.$white-color;
   padding: 0 20px;
   margin-left: -20px;
+  margin-bottom: 28px;
   width: fit-content;
 
   &::before {
@@ -38,27 +39,41 @@
     z-index: -1;
   }
 
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-xl;
+    line-height: v.$line-height-2xl;
+    padding: 0 36px;
+    margin-left: 1px;
+    margin-bottom: 80px;
+  }
+
   @include m.breakpoint(large) {
     grid-column: 1/5;
     grid-row: 1;
-    font-size: v.$font-size-xl;
-    line-height: v.$line-height-2xl;
     margin-bottom: 80px;
+    margin-left: -40px;
   }
 }
 
 .extra-product-catalog__list {
   @include m.list-reset;
 
+  @include m.breakpoint(medium) {
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+  }
+
   @include m.breakpoint(large) {
     grid-column: 1/4;
     grid-row: 2;
+    border-left: none;
+    border-right: none;
   }
 }
 
 .extra-product-catalog__item {
   border-top: 1px solid v.$color-gray-200;
-  padding: 13px 0 19px;
+  padding: 13px 0 18px;
 
   &:last-child {
     border-bottom: 1px solid v.$color-gray-200;
@@ -77,10 +92,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: v.$brand-color-500;
-  padding: 187px 60px 43px 60px;
+  padding: 187px 55px 43px;
   text-align: center;
   position: relative;
-  margin: 35px 0;
+  margin: 34px 0;
 
   @media (min-resolution: 2dppx) {
     background-image:
@@ -102,7 +117,7 @@
 
   @include m.breakpoint(medium) {
     margin: 0;
-    margin-top: 70px;
+    margin-top: 68px;
     background-image:
       linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../img/cat-present/cat-present-tablet.jpg");

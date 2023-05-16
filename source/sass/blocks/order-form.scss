@@ -10,7 +10,7 @@
   }
 
   @include m.breakpoint(large) {
-    gap: 68px 80px;
+    gap: 0 80px;
     padding-bottom: 82px;
   }
 }
@@ -37,7 +37,7 @@
 
   &--contacts {
     width: 227px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 
   &::before {
@@ -54,6 +54,8 @@
   @include m.breakpoint(medium) {
     font-size: v.$font-size-xl;
     line-height: v.$line-height-2xl;
+    padding: 0 40px;
+    margin-left: -40px;
 
     &--contacts {
       width: fit-content;
@@ -74,16 +76,17 @@
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
+    line-height: 20px;
   }
 }
 
 .order-form__hint {
   text-align: center;
-  margin-bottom: 32px;
+  margin-top: 8px;
+  margin-bottom: 27px;
 
   @include m.breakpoint(medium) {
     text-align: left;
-    margin-top: 13px;
     margin-bottom: 0;
   }
 }

@@ -4,6 +4,10 @@
 .form-group {
   padding-bottom: 24px;
 
+  &--contacts {
+    padding-bottom: 0;
+  }
+
   @include m.breakpoint(medium) {
     padding-bottom: 0;
 
@@ -12,7 +16,7 @@
     }
 
     &--contacts {
-      margin-bottom: 65px;
+      margin-bottom: 46px;
     }
   }
 
@@ -36,17 +40,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 80px;
+    margin-bottom: 68px;
   }
 }
 
 .form-group__item {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @include m.breakpoint(medium) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }

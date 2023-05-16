@@ -3,13 +3,14 @@
 
 .extra-product-card {
   @include m.breakpoint(medium) {
-    padding: 26px 38px 28px 38px;
+    padding: 25px 38px 27px 38px;
     display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0 60px;
   }
 
   @include m.breakpoint(large) {
-    padding: 15px 0;
+    padding: 15px 0 16px;
     grid-template-columns: 1fr 80px 1fr 80px 1fr;
     gap: 0;
     align-items: center;
@@ -24,11 +25,14 @@
   text-transform: uppercase;
   color: v.$color-gray-500;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 
   @include m.breakpoint(medium) {
-    grid-column: 1/2;
+    grid-column: 1;
     grid-row: 1;
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-s;
+    margin-bottom: 25px;
   }
 
   @include m.breakpoint(large) {
@@ -42,38 +46,43 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   @include m.breakpoint(medium) {
-    grid-column: 2/3;
-    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 93px;
+    justify-items: end;
     margin-bottom: 0;
   }
 
   @include m.breakpoint(large) {
-    display: grid;
     grid-template-columns: 1fr 80px;
     grid-column: 3/5;
     position: relative;
     grid-row: none;
+    justify-items: start;
   }
 }
 
 .extra-product-card__data {
   font-family: v.$secondary-font;
   font-weight: 400;
-  font-size: v.$font-size-2xs;
+  font-size: v.$font-size-3xs;
   line-height: v.$line-height-3xs;
   color: v.$color-gray-400;
   margin: 0;
+  max-width: 120px;
 
   @include m.breakpoint(medium) {
-    padding-right: 20px;
+    font-size: v.$font-size-2xs;
+    line-height: v.$line-height-s;
+    max-width: none;
   }
 }
 
 .extra-product-card__button {
   font-size: v.$font-size-2xs;
+  line-height: v.$line-height-s;
   width: 100%;
 
   @include m.breakpoint(medium) {

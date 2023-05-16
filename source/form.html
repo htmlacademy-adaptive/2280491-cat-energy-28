@@ -9,41 +9,44 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   </head>
+
   <body class="page__body">
     <header class="page__header page-header">
       <div class="page-header__wrapper">
+        <div class="page-header__logo-btn">
+          <a href="index.html" class="page-header__logo logo">
+            <picture>
+              <source media="(min-width: 1270px)"
+                srcset="img/logo/logo-desktop.svg">
+              <source media="(min-width: 758px)"
+                srcset="img/logo/logo-tablet.svg">
+              <img class="logo__icon" alt="Cat energy" aria-hidden="true"
+                src="img/logo/logo-mobile.svg" width="33" height="37">
+            </picture>
+            <img class="logo__text logo__text--header" src="img/logo-title.svg" width="101" height="18" alt="Cat energy">
+          </a>
 
-        <a href="index.html" class="page-header__logo logo">
-          <picture>
-            <source media="(min-width: 1270px)"
-              srcset="img/logo/logo-desktop.svg">
-            <source media="(min-width: 758px)"
-              srcset="img/logo/logo-tablet.svg">
-            <img class="logo__icon" alt="Cat energy" aria-hidden="true"
-              src="img/logo/logo-mobile.svg" width="33" height="37">
-          </picture>
-          <img class="logo__text logo__text--header" src="img/logo-title.svg" width="101" height="18" alt="Cat energy">
-        </a>
-
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
 
         <nav class="page-header__main-nav main-nav">
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="main-nav__item main-nav__item--current">
-                <a class="main-nav__link" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -58,17 +61,17 @@
             <legend class="visually-hidden">Информация о вашем котике</legend>
 
             <div class="form-group__item form-field">
-              <label class="form-field__label" for="cat-name">Имя:*</label>
+              <label class="form-field__label form-field__label--name" for="cat-name">Имя:*</label>
               <input class="form-field__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
             </div>
 
             <div class="form-group__item form-field">
-              <label class="form-field__label" for="cat-weight">Вес(кг):*</label>
+              <label class="form-field__label form-field__label--weight" for="cat-weight">Вес (кг):*</label>
               <input class="form-field__input" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
             </div>
 
             <div class="form-group__item form-field">
-              <label class="form-field__label" for="cat-age">Возраст(лет):*</label>
+              <label class="form-field__label form-field__label--age" for="cat-age">Возраст (лет):*</label>
               <input class="form-field__input" type="number" id="cat-age" name="cat-age" placeholder="7" required>
             </div>
           </fieldset>
@@ -106,12 +109,12 @@
             <ul class="form-group__list">
               <li class="form-group__item form-field form-field--contacts">
                 <input class="form-field__input form-field__input--contacts" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-                <label class="form-field__label form-field__label--icon form-field__label--icon-mail" for="email">E-mail:*</label>
+                <label class="form-field__label form-field__label--email form-field__label--icon form-field__label--icon-mail" for="email">E-mail:*</label>
               </li>
 
               <li class="form-group__item form-field form-field--contacts">
                 <input class="form-field__input form-field__input--contacts" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
-                <label class="form-field__label form-field__label--icon form-field__label--icon-phone" for="phone">Телефон:*</label>
+                <label class="form-field__label form-field__label--phone form-field__label--icon form-field__label--icon-phone" for="phone">Телефон:*</label>
               </li>
             </ul>
           </fieldset>
@@ -173,26 +176,44 @@
 
         <div class="address wrapper">
           <div class="address__wrapper">
-            <p class="address__dealers">Приглашаем к сотрудничеству дилеров!</p>
-            <address class="address__location">
-              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            <p class="address__dealers">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <address class="address__location address__location--form">
+              ул. Большая Конюшенная, д. 19/8
+              <span class="address__location-city">Санкт-Петербург</span>
             </address>
           </div>
         </div>
 
         <iframe class="address-map__map"
+          title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728612!2d30.32047247724497!3d59.938716474915104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1681742316920!5m2!1sru!2s"
           width="320"
           allowfullscreen
-          alt="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          loading="lazy">
         </iframe>
+
+        <noscript>
+          <div class="address-map__map-noscript">
+            <picture>
+              <source media="(min-width: 1270px)"
+                srcset="img/map/map-desktop.jpg 1x,
+                img/map/map-desktop@2x.jpg 2x" width="1440" height="400">
+              <source media="(min-width: 758px)"
+                srcset="img/map/map-tablet.jpg 1x,
+                img/map/map-tablet@2x.jpg 2x" width="768" height="400">
+              <img class="address-map__img-noscript"
+                src="img/map/map-mobile.jpg" width="320" height="362" alt="Cat Energy на карте"
+                srcset="img/map/map-mobile@2x.jpg 2x">
+            </picture>
+          </div>
+        </noscript>
       </section>
     </main>
 
     <footer class="page__footer page-footer">
       <div class="page-footer__wrapper wrapper">
 
-        <a class="page-footer__logo" href="index.html">
+        <a class="page-footer__logo logo" href="index.html">
           <img class="logo__text logo__text--footer" src="img/logo-title.svg" width="128" height="24" alt="Cat energy">
         </a>
 

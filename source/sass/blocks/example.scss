@@ -22,16 +22,17 @@
 }
 
 .example__wrapper {
-  padding-top: 35px;
-  padding-bottom: 40px;
+  padding-top: 24px;
+  padding-bottom: 34px;
 
   @include m.breakpoint(medium) {
-    padding-top: 43px;
+    padding-top: 55px;
     padding-bottom: 100px;
   }
 
   @include m.breakpoint(large) {
-    padding-bottom: 75px;
+    padding-top: 35px;
+    padding-bottom: 80px;
   }
 }
 
@@ -64,7 +65,8 @@
   }
 
   @include m.breakpoint(large) {
-    margin-right: 138px;
+    margin-right: 130px;
+    margin-bottom: 70px;
   }
 }
 
@@ -78,8 +80,8 @@
   }
 
   @include m.breakpoint(large) {
-    margin-bottom: 55px;
-    margin-right: 204px;
+    margin-bottom: 50px;
+    margin-right: 195px;
   }
 }
 
@@ -87,7 +89,7 @@
   @include m.breakpoint(medium) {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 95px;
   }
 
   @include m.breakpoint(large) {
@@ -104,24 +106,30 @@
   text-transform: uppercase;
   text-align: center;
   display: block;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 20px;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-s;
     text-align: right;
+    margin-top: 10px;
     margin-bottom: 0;
+    max-width: 180px;
   }
 
   @include m.breakpoint(large) {
+    margin-top: 5px;
     text-align: left;
+    margin-bottom: -5px;
+    max-width: 430px;
   }
 }
 
 .example__costs-text {
   @include m.breakpoint(medium) {
     display: block;
+    margin-bottom: 10px;
   }
 
   @include m.breakpoint(large) {
@@ -134,7 +142,7 @@
   @include m.breakpoint(large) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 95px;
     align-items: end;
   }
 }

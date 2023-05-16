@@ -10,13 +10,13 @@
 
 .address__wrapper {
   display: flex;
-  padding: 26px 0 26px;
+  padding: 28px 0;
 
   @include m.breakpoint(medium) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    padding: 60px 40px;
+    padding: 57px 40px 60px;
   }
 
   @include m.breakpoint(large) {
@@ -68,5 +68,12 @@
   @include m.breakpoint(large) {
     text-align: left;
     margin-left: 0;
+  }
+}
+
+.address__location-city {
+  @include m.breakpoint(medium) {
+    margin-top: 20px;
+    display: block;
   }
 }

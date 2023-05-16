@@ -14,7 +14,7 @@
 
   @include m.breakpoint(large) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    gap: 63px 80px;
     padding-bottom: 75px;
   }
 }

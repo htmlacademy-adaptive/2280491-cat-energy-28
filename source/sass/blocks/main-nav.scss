@@ -1,9 +1,5 @@
-@use "mixins" as m;
 @use "variables" as v;
-
-.main-nav__wrapper {
-  margin-top: 18px;
-}
+@use "mixins" as m;
 
 .main-nav__list {
   list-style: none;
@@ -12,12 +8,26 @@
 
   @include m.breakpoint(medium) {
     display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    max-width: 450px;
+  }
+
+  @include m.breakpoint(large) {
+    max-width: 500px;
   }
 }
 
 .main-nav__item {
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+
   @include m.breakpoint(medium) {
-    margin-right: 35px;
+    display: block;
+    margin-right: 37px;
+    border-top: none;
+    width: auto;
 
     &:last-child {
       margin-right: 0;
@@ -27,14 +37,17 @@
 
 .main-nav__item--current {
   @include m.breakpoint(medium) {
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     border-bottom: 2px solid v.$brand-color-400;
+  }
+
+  @include m.breakpoint(large) {
+    padding-bottom: 5px;
   }
 }
 
 .main-nav__item--current-index {
   @include m.breakpoint(large) {
-    padding-bottom: 12px;
     border-bottom: 2px solid v.$white-color;
   }
 }
@@ -50,7 +63,6 @@
   display: block;
   padding-top: 22px;
   padding-bottom: 24px;
-  border-top: 1px solid #e6e6e6;
   text-align: center;
 
   &:hover {
@@ -71,6 +83,9 @@
   }
 
   @include m.breakpoint(large) {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+
     &--light {
       color: v.$white-color;
     }

@@ -43,6 +43,6 @@
   @include m.breakpoint(large) {
     grid-template-columns: repeat(4, 1fr);
     gap: 0 80px;
-    margin-bottom: 0;
+    margin-bottom: 60px;
   }
 }

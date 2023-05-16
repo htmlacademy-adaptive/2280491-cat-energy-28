@@ -24,7 +24,6 @@
   color: v.$color-gray-400;
   text-transform: uppercase;
   margin-right: 13px;
-  white-space: nowrap;
 
   &--icon {
     &::after {
@@ -32,10 +31,11 @@
       position: absolute;
       width: 20px;
       height: 20px;
-      top: 13px;
+      top: 50%;
       right: 15px;
       background-color: v.$black-color;
       background-repeat: no-repeat;
+      transform: translateY(-50%);
     }
   }
 
@@ -59,8 +59,11 @@
     text-transform: uppercase;
     color: v.$color-gray-400;
 
+    &--icon {
+      margin-right: 20px;
+    }
+
     &::after {
-      top: 20px;
       right: 18px;
     }
   }
@@ -76,7 +79,10 @@
   width: 100%;
   padding: 14px 15px 13px 20px;
   border: 1px solid #e7e7e7;
+  flex: 1;
+  min-width: 150px;
   -moz-appearance: textfield; /* stylelint-disable-line */
+
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -130,27 +136,30 @@
     padding-left: 15px;
   }
 
-  &--comment {
-    padding-left: 15px;
-    padding-right: 12px;
-    height: 150px;
-    margin-top: 38px;
-    margin-bottom: 23px;
-
-    @include m.breakpoint(medium) {
-      margin-top: 76px;
-      margin-bottom: 65px;
-    }
-
-    @include m.breakpoint(large) {
-      padding-left: 20px;
-      padding-top: 10px;
-      height: 174px;
-    }
-  }
-
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-xl;
+    padding: 10px 15px 10px 20px;
+  }
+}
+
+.form-field__input--comment {
+  padding-left: 15px;
+  padding-right: 12px;
+  height: 152px;
+  margin-top: 38px;
+  margin-bottom: 25px;
+  padding-top: 8px;
+
+  @include m.breakpoint(medium) {
+    height: 172px;
+    margin-top: 76px;
+    margin-bottom: 65px;
+  }
+
+  @include m.breakpoint(large) {
+    padding-left: 20px;
+    padding-top: 10px;
+    height: 174px;
   }
 }

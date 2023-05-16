@@ -1,10 +1,16 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .social-list__item {
-  margin-right: 20px;
+  margin-right: 25px;
+  margin-bottom: 20px;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include m.breakpoint(medium) {
+    margin-top: 20px;
   }
 }
 
