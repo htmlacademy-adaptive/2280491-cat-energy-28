@@ -30,7 +30,6 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  word-break: break-all;
 
   @include m.breakpoint(medium) {
     font-family: v.$primary-font;

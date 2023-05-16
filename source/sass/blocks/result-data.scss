@@ -27,7 +27,6 @@
   margin-top: -8px;
   background-color: #eaeaea;
   width: 80px;
-  word-wrap: break-word;
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-3xs;

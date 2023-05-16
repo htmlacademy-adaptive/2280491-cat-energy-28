@@ -24,27 +24,6 @@
   color: v.$color-gray-400;
   text-transform: uppercase;
   margin-right: 13px;
-  word-break: break-all;
-
-  &--name {
-    width: 40px;
-  }
-
-  &--wight {
-    width: 60px;
-  }
-
-  &--age {
-    width: 100px;
-  }
-
-  &--email {
-    width: 50px;
-  }
-
-  &--phone {
-    width: 67px;
-  }
 
   &--icon {
     &::after {
@@ -80,26 +59,6 @@
     text-transform: uppercase;
     color: v.$color-gray-400;
 
-    &--name {
-      width: 47px;
-    }
-
-    &--wight {
-      width: 75px;
-    }
-
-    &--age {
-      width: 124px;
-    }
-
-    &--email {
-      width: 63px;
-    }
-
-    &--phone {
-      width: 85px;
-    }
-
     &--icon {
       margin-right: 20px;
     }
@@ -121,7 +80,9 @@
   padding: 14px 15px 13px 20px;
   border: 1px solid #e7e7e7;
   flex: 1;
+  min-width: 150px;
   -moz-appearance: textfield; /* stylelint-disable-line */
+
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {

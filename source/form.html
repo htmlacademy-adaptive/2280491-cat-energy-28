@@ -9,7 +9,11 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   </head>
+
   <body class="page__body">
     <header class="page__header page-header">
       <div class="page-header__wrapper">
@@ -32,19 +36,17 @@
         </div>
 
         <nav class="page-header__main-nav main-nav">
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="main-nav__item main-nav__item--current">
-                <a class="main-nav__link" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -183,10 +185,11 @@
         </div>
 
         <iframe class="address-map__map"
+          title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728612!2d30.32047247724497!3d59.938716474915104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1681742316920!5m2!1sru!2s"
           width="320"
           allowfullscreen
-          alt="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          loading="lazy">
         </iframe>
 
         <noscript>
@@ -197,7 +200,7 @@
                 img/map/map-desktop@2x.jpg 2x" width="1440" height="400">
               <source media="(min-width: 758px)"
                 srcset="img/map/map-tablet.jpg 1x,
-                img/map/map-tablet@2x.jpg 1x" width="768" height="400">
+                img/map/map-tablet@2x.jpg 2x" width="768" height="400">
               <img class="address-map__img-noscript"
                 src="img/map/map-mobile.jpg" width="320" height="362" alt="Cat Energy на карте"
                 srcset="img/map/map-mobile@2x.jpg 2x">
@@ -210,7 +213,7 @@
     <footer class="page__footer page-footer">
       <div class="page-footer__wrapper wrapper">
 
-        <a class="page-footer__logo" href="index.html">
+        <a class="page-footer__logo logo" href="index.html">
           <img class="logo__text logo__text--footer" src="img/logo-title.svg" width="128" height="24" alt="Cat energy">
         </a>
 

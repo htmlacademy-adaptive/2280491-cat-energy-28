@@ -9,9 +9,12 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   </head>
-  <body class="page__body page__body--main">
 
+  <body class="page__body page__body--main">
     <header class="page__header page-header">
       <div class="page-header__wrapper">
         <div class="page-header__logo-btn">
@@ -33,19 +36,17 @@
         </div>
 
         <nav class="page-header__main-nav main-nav">
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--current main-nav__item--current-index">
-                <a class="main-nav__link main-nav__link--light" href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--light" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--light" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current main-nav__item--current-index">
+              <a class="main-nav__link main-nav__link--light" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--light" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--light" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -152,7 +153,7 @@
               </div>
             </div>
 
-            <figure class="example__slider slider">
+            <div class="example__slider slider">
               <picture>
                 <source media="(min-width: 758px)"
                   srcset="img/slider/cat-before-tablet.png 1x,
@@ -170,12 +171,11 @@
                   src="img/slider/cat-after-mobile.png" width="280" height="256" alt="cat after"
                   srcset="img/slider/cat-after-mobile@2x.png 2x">
               </picture>
-              <figcaption class="visually-hidden">Пример</figcaption>
 
               <button class="slider__button" type="button">
                 <span class="visually-hidden">Перетащить.</span>
               </button>
-            </figure>
+            </div>
           </div>
         </div>
       </section>
@@ -209,7 +209,7 @@
                 img/map/map-desktop@2x.jpg 2x" width="1440" height="400">
               <source media="(min-width: 758px)"
                 srcset="img/map/map-tablet.jpg 1x,
-                img/map/map-tablet@2x.jpg 1x" width="768" height="400">
+                img/map/map-tablet@2x.jpg 2x" width="768" height="400">
               <img class="address-map__img-noscript"
                 src="img/map/map-mobile.jpg" width="320" height="362" alt="Cat Energy на карте"
                 srcset="img/map/map-mobile@2x.jpg 2x">
