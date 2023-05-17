@@ -1,16 +1,59 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.page-header {
+  position: relative;
+}
+
 .page-header__wrapper {
   padding-top: 10px;
 
   &--close-menu {
+    .page-header__main-nav {
+      display: none;
+    }
+
     .page-header__toggle {
+      display: block;
       background-image: url("../img/sprite.svg#hamburger-menu");
     }
 
+    @include m.breakpoint(medium) {
+      .page-header__main-nav {
+        display: block;
+      }
+
+      .page-header__toggle {
+        display: none;
+      }
+    }
+  }
+
+  &--open-menu {
     .page-header__main-nav {
-      display: none;
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      background-color: v.$white-color;
+    }
+
+    .page-header__toggle {
+      display: block;
+      background-image: url("../img/sprite.svg#close");
+    }
+
+    @include m.breakpoint(medium) {
+      .page-header__main-nav {
+        position: relative;
+        background-color: transparent;
+      }
+
+      .page-header__toggle {
+        display: none;
+      }
     }
   }
 
@@ -54,7 +97,6 @@
 }
 
 .page-header__toggle {
-  background-image: url("../img/sprite.svg#close");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -65,9 +107,5 @@
   cursor: pointer;
   grid-column: 3/4;
   grid-row: 1;
-  display: block;
-
-  @include m.breakpoint(medium) {
-    display: none;
-  }
+  display: none;
 }
