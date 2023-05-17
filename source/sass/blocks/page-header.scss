@@ -8,55 +8,6 @@
 .page-header__wrapper {
   padding-top: 10px;
 
-  &--close-menu {
-    .page-header__main-nav {
-      display: none;
-    }
-
-    .page-header__toggle {
-      display: block;
-      background-image: url("../img/sprite.svg#hamburger-menu");
-    }
-
-    @include m.breakpoint(medium) {
-      .page-header__main-nav {
-        display: block;
-      }
-
-      .page-header__toggle {
-        display: none;
-      }
-    }
-  }
-
-  &--open-menu {
-    .page-header__main-nav {
-      display: block;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      background-color: v.$white-color;
-    }
-
-    .page-header__toggle {
-      display: block;
-      background-image: url("../img/sprite.svg#close");
-    }
-
-    @include m.breakpoint(medium) {
-      .page-header__main-nav {
-        position: relative;
-        background-color: transparent;
-      }
-
-      .page-header__toggle {
-        display: none;
-      }
-    }
-  }
-
   @include m.breakpoint(medium) {
     width: 708px;
     margin: 0 auto;
@@ -71,6 +22,55 @@
   @include m.breakpoint(large) {
     padding-top: 52px;
     width: 1220px;
+  }
+}
+
+.page-header__wrapper--close-menu {
+  .page-header__main-nav {
+    display: none;
+  }
+
+  .page-header__toggle {
+    display: block;
+    background-image: url("../img/sprite.svg#hamburger-menu");
+  }
+
+  @include m.breakpoint(medium) {
+    .page-header__main-nav {
+      display: block;
+    }
+
+    .page-header__toggle {
+      display: none;
+    }
+  }
+}
+
+.page-header__wrapper--open-menu {
+  .page-header__main-nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: v.$white-color;
+  }
+
+  .page-header__toggle {
+    display: block;
+    background-image: url("../img/sprite.svg#close");
+  }
+
+  @include m.breakpoint(medium) {
+    .page-header__main-nav {
+      position: relative;
+      background-color: transparent;
+    }
+
+    .page-header__toggle {
+      display: none;
+    }
   }
 }
 
