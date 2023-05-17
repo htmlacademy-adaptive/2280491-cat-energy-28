@@ -76,10 +76,10 @@
   line-height: v.$line-height-xs;
   color: v.$color-gray-400;
   text-transform: uppercase;
-  width: 100%;
+  width: 150px;
   padding: 14px 15px 13px 20px;
   border: 1px solid #e7e7e7;
-  flex: 1;
+  flex-grow: 1;
   min-width: 150px;
   -moz-appearance: textfield; /* stylelint-disable-line */
 

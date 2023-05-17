@@ -1,18 +1,12 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+.page-header {
+  position: relative;
+}
+
 .page-header__wrapper {
   padding-top: 10px;
-
-  &--close-menu {
-    .page-header__toggle {
-      background-image: url("../img/sprite.svg#hamburger-menu");
-    }
-
-    .page-header__main-nav {
-      display: none;
-    }
-  }
 
   @include m.breakpoint(medium) {
     width: 708px;
@@ -22,11 +16,61 @@
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
+    gap: 12px;
   }
 
   @include m.breakpoint(large) {
     padding-top: 52px;
     width: 1220px;
+  }
+}
+
+.page-header__wrapper--close-menu {
+  .page-header__main-nav {
+    display: none;
+  }
+
+  .page-header__toggle {
+    display: block;
+    background-image: url("../img/sprite.svg#hamburger-menu");
+  }
+
+  @include m.breakpoint(medium) {
+    .page-header__main-nav {
+      display: block;
+    }
+
+    .page-header__toggle {
+      display: none;
+    }
+  }
+}
+
+.page-header__wrapper--open-menu {
+  .page-header__main-nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: v.$white-color;
+  }
+
+  .page-header__toggle {
+    display: block;
+    background-image: url("../img/sprite.svg#close");
+  }
+
+  @include m.breakpoint(medium) {
+    .page-header__main-nav {
+      position: relative;
+      background-color: transparent;
+    }
+
+    .page-header__toggle {
+      display: none;
+    }
   }
 }
 
@@ -37,6 +81,7 @@
   width: 280px;
   margin: 0 auto;
   padding-bottom: 12px;
+  flex-shrink: 0;
 
   @include m.breakpoint(medium) {
     grid-template-columns: 34px 1fr;
@@ -49,14 +94,9 @@
 .page-header__logo {
   grid-column: 1/3;
   grid-row: 1;
-
-  @include m.breakpoint(medium) {
-    margin-right: 94px;
-  }
 }
 
 .page-header__toggle {
-  background-image: url("../img/sprite.svg#close");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -67,9 +107,5 @@
   cursor: pointer;
   grid-column: 3/4;
   grid-row: 1;
-  display: block;
-
-  @include m.breakpoint(medium) {
-    display: none;
-  }
+  display: none;
 }
