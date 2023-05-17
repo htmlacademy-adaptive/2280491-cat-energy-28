@@ -95,7 +95,7 @@
     outline: 2px solid #ff8282;
   }
 
-  &--error + .form-field__label-contacts {
+  &--error + .form-field__label--icon {
     &::after {
       background-color: #ff8282;
     }
