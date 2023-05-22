@@ -12,10 +12,11 @@
   &::before {
     content: "";
     position: absolute;
-    border: 1px solid v.$color-gray-100;
     top: 0;
-    left: calc(50% - 50vw);
+    height: 1px;
     width: 100vw;
+    background-color: v.$color-gray-100;
+    left: calc(50% - 50vw);
   }
 
   @include m.breakpoint(medium) {

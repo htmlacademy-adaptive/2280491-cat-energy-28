@@ -35,6 +35,7 @@
     background-image: url("../img/sprite.svg#hamburger-menu");
   }
 
+
   @include m.breakpoint(medium) {
     .page-header__main-nav {
       display: block;
@@ -82,12 +83,27 @@
   margin: 0 auto;
   padding-bottom: 12px;
   flex-shrink: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 100vw;
+    background-color: #e6e6e6;
+    left: calc(50% - 50vw);
+  }
 
   @include m.breakpoint(medium) {
     grid-template-columns: 34px 1fr;
     padding-bottom: 0;
     width: auto;
     margin: 0;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
