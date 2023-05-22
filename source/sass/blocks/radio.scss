@@ -52,6 +52,7 @@
   left: 0;
   margin-right: 15px;
   min-width: 31px;
+  flex-shrink: 0;
 
   @include m.breakpoint(medium) {
     width: 40px;
@@ -60,12 +61,13 @@
   }
 }
 
-.radio__text:hover::before {
+.radio__input:not(:disabled):hover + .radio__text::before {
   border: 1px solid #bababa;
 }
 
 .radio__input:disabled + .radio__text {
   opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .radio__input:checked + .radio__text::after {

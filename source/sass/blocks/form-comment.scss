@@ -7,3 +7,35 @@
     grid-row: 3;
   }
 }
+
+.form-comment__textarea {
+  font-family: v.$primary-font;
+  font-weight: 400;
+  font-size: v.$font-size-2xs;
+  line-height: v.$line-height-xs;
+  color: v.$color-gray-400;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-right: 12px;
+  height: 152px;
+  border: 1px solid #e7e7e7;
+  margin-top: 38px;
+  margin-bottom: 18px;
+  padding-top: 8px;
+  width: 100%;
+
+  @include m.breakpoint(medium) {
+    font-size: v.$font-size-s;
+    line-height: v.$line-height-xl;
+    padding: 10px 15px 10px 20px;
+    height: 172px;
+    margin-top: 76px;
+    margin-bottom: 62px;
+  }
+
+  @include m.breakpoint(large) {
+    padding-left: 20px;
+    padding-top: 10px;
+    height: 174px;
+  }
+}

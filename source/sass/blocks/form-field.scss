@@ -73,11 +73,11 @@
   font-family: v.$primary-font;
   font-weight: 400;
   font-size: v.$font-size-2xs;
-  line-height: v.$line-height-xs;
+  line-height: v.$line-height-l;
   color: v.$color-gray-400;
   text-transform: uppercase;
   width: 150px;
-  padding: 14px 15px 13px 20px;
+  padding: 10px 15px 9px 20px;
   border: 1px solid #e7e7e7;
   flex-grow: 1;
   min-width: 150px;
@@ -102,7 +102,7 @@
   }
 
   &:hover {
-    outline: 1px solid v.$color-gray-200;
+    border: 1px solid v.$color-gray-200;
   }
 
   &:focus {
@@ -133,33 +133,12 @@
   }
 
   &--contacts {
-    padding-left: 15px;
+    padding-left: 12px;
   }
 
   @include m.breakpoint(medium) {
     font-size: v.$font-size-s;
     line-height: v.$line-height-xl;
     padding: 10px 15px 10px 20px;
-  }
-}
-
-.form-field__input--comment {
-  padding-left: 15px;
-  padding-right: 12px;
-  height: 152px;
-  margin-top: 38px;
-  margin-bottom: 25px;
-  padding-top: 8px;
-
-  @include m.breakpoint(medium) {
-    height: 172px;
-    margin-top: 76px;
-    margin-bottom: 65px;
-  }
-
-  @include m.breakpoint(large) {
-    padding-left: 20px;
-    padding-top: 10px;
-    height: 174px;
   }
 }

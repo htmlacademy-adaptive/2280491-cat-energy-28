@@ -33,13 +33,14 @@
 }
 
 .form-group__list {
-  padding-left: 0;
+  @include m.list-reset;
+  margin-bottom: 22px;
 
   @include m.breakpoint(large) {
     clear: both;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0 80px;
+    gap: 20px 80px;
     margin-bottom: 68px;
   }
 }

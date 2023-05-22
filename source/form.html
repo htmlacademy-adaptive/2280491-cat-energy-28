@@ -126,12 +126,10 @@
             </ul>
           </fieldset>
 
-          <p class="order-form__group form-comment">
+          <div class="order-form__group form-comment">
             <span class="form-comment__legend order-form__legend">Комментарий</span>
-            <label class="form-comment__field form-field">
-              <textarea class="form-field__input form-field__input--comment" id="comment" name="comment">Расскажите обо всех повадках кота</textarea>
-            </label>
-          </p>
+            <textarea class="form-comment__textarea" id="comment" name="comment">Расскажите обо всех повадках кота</textarea>
+          </div>
 
           <fieldset class="order-form__group form-options">
             <legend class="form-options__legend order-form__legend">Дополнительно</legend>
@@ -202,6 +200,15 @@
         <noscript>
           <div class="address-map__map-noscript">
             <picture>
+              <source type="image/webp" media="(min-width: 1270px)"
+                srcset="img/map/map-desktop.webp 1x,
+                img/map/map-desktop@2x.webp 2x" width="1440" height="400">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/map/map-tablet.webp 1x,
+                img/map/map-tablet@2x.webp 2x" width="768" height="400">
+              <source type="image/webp"
+                srcset="img/map/map-mobile.webp 1x,
+                img/map/map-mobile@2x.webp 2x" width="320" height="362">
               <source media="(min-width: 1270px)"
                 srcset="img/map/map-desktop.jpg 1x,
                 img/map/map-desktop@2x.jpg 2x" width="1440" height="400">
